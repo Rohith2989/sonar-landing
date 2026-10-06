@@ -1,0 +1,35 @@
+{
+  "data": "Anonymous local sample fixtures; no customer data",
+  "capture": "Actual React app; no DOM styling or layout replacements",
+  "source_revision": "69eb9c97e5d26882cdce18d371f81d5126b5f027",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "images": [
+    {
+      "file": "dashboard.png",
+      "route": "/home",
+      "scroll": 0,
+      "sha256": "9f4d4bfe92046e0a5925eaabfd75d8a05deacb115ae6e814819955eb7f304b1d"
+    },
+    {
+      "file": "creators.png",
+      "route": "/discover/creators",
+      "scroll": 0,
+      "sha256": "6e8c7376c7aa6fce4a358bb7e14004c16756731386a0169cafbe57bacd721520"
+    },
+    {
+      "file": "reports.png",
+      "route": "/create/reports",
+      "scroll": 0,
+      "sha256": "4cd1886443d2f50f39fabacc00ef70c0075f71ac94c50bd201d33e4a82d240c5"
+    },
+    {
+      "file": "ask.png",
+      "route": "/agent",
+      "scroll": 0,
+      "sha256": "a3b968ab3cae95b8c6863a73e435a6be4a472bbe168d3708cf2885bceea229a8"
+    }
+  ]
+}

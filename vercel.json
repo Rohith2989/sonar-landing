@@ -1,0 +1,19 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/prerendered/index.html" },
+    { "source": "/pricing", "destination": "/prerendered/pricing.html" },
+    { "source": "/competitor-tracking", "destination": "/prerendered/competitor-tracking.html" },
+    { "source": "/competitor-tracking/:slug", "destination": "/prerendered/competitor-tracking/:slug.html" },
+    { "source": "/terms", "destination": "/prerendered/terms.html" },
+    { "source": "/privacy-policy", "destination": "/prerendered/privacy-policy.html" },
+    { "source": "/contact", "destination": "/prerendered/contact.html" },
+    { "source": "/login", "destination": "/prerendered/login.html" },
+    { "source": "/signup", "destination": "/prerendered/signup.html" },
+    { "source": "/api/public/pricing", "destination": "/preview-data/pricing.json" }
+  ],
+  "headers": [
+    { "source": "/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] },
+    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] },
+    { "source": "/landing/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }] }
+  ]
+}

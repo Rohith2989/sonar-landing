@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# AI search/retrieval crawlers are allowed on purpose (citation eligibility).
+# Every public page also serves Markdown to `Accept: text/markdown` (acceptmarkdown.com).
+
+Sitemap: https://www.8x-report.social/sitemap.xml
+
+# Agent manifest (llmstxt.org) — what this site is, when to use it, and which pages matter:
+# https://www.8x-report.social/llms.txt
