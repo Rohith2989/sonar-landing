@@ -1,0 +1,3 @@
+/* Keep the static bundle calm before the measured duration is available. */
+.lp-marquee-row { animation-duration: var(--marquee-duration, 2400s); }
+.lp-marquee-row.rev { animation-duration: var(--marquee-duration, 2880s); }

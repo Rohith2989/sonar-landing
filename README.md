@@ -60,3 +60,12 @@ Ordinary page loads autoplay. The sequence pauses off screen or in a hidden tab,
 respects reduced-motion preferences, and retains the original accessible images
 if the animation assets fail to load. The control pauses the camera/headphone sequence;
 the existing sky animation is independent.
+
+## Niche scroller
+
+`source/marquee-speed.mjs` measures each duplicated row so it drifts at 20px/s
+(16px/s in the reverse row), regardless of label count, font loading or viewport
+width. Hover still pauses it, and reduced-motion preferences keep it static.
+The build copies the module and CSS override into `landing/` and loads them in
+both static entry points. The matching CSS fallback also lives in
+`source/src/styles/landing.css` for the upstream React build.
