@@ -1,4 +1,5 @@
 {
+  "outputDirectory": ".",
   "rewrites": [
     { "source": "/", "destination": "/prerendered/index.html" },
     { "source": "/pricing", "destination": "/prerendered/pricing.html" },
