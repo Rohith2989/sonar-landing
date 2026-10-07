@@ -2,6 +2,7 @@ import {copyFile,readFile,writeFile,mkdir} from 'node:fs/promises';
 import {sceneMarkup,copyMarkup,controlMarkup} from '../source/ask-motion/feed-markup.mjs';
 import {peopleMarkup} from '../source/people-scene/people-content.mjs';
 import {pricingMarkup,validateCatalogue} from '../source/pricing-scene/pricing-content.mjs';
+import {footerMarkup} from '../source/page-polish/footer-content.mjs';
 const out='landing/hero-motion';
 await mkdir(out,{recursive:true});
 for(const name of ['hero-motion.mjs','hero-motion.css','timeline.mjs'])await copyFile(`source/hero-motion/${name}`,`${out}/${name}`);
@@ -60,4 +61,16 @@ for(const file of ['index.html','prerendered/index.html','prerendered/pricing.ht
   html=html.replace('<div class="lp-pricing lp-grain">','<div class="sp-pricing-host">');
   await writeFile(file,html);
 }
-console.log('Hero, Ask Sonar, people, pricing and marquee built; landing and pricing entry points wired.');
+await mkdir('landing/page-polish',{recursive:true});
+for(const name of ['footer-content.mjs','page-polish.mjs','page-polish.css'])await copyFile(`source/page-polish/${name}`,`landing/page-polish/${name}`);
+const polishMarker='<!-- sonar-page-polish -->';
+const polishAssets=`${polishMarker}\n    <link rel="stylesheet" href="/landing/page-polish/page-polish.css">\n    <script type="module" src="/landing/page-polish/page-polish.mjs"></script>`;
+for(const file of ['index.html','prerendered/index.html','prerendered/pricing.html']) {
+  let html=await readFile(file,'utf8');
+  if(!html.includes(polishMarker))html=html.replace('</head>',`${polishAssets}\n  </head>`);
+  const footer=/<footer\b[^>]*>[\s\S]*?<\/footer>/;
+  if(!footer.test(html))throw new Error(`Missing footer in ${file}`);
+  html=html.replace(footer,footerMarkup);
+  await writeFile(file,html);
+}
+console.log('Landing and pricing built with shared page cleanup and footer.');

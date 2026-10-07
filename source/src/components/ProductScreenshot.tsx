@@ -28,20 +28,10 @@ export function ProductScreenshot({ view, priority = false }: {
   return (
     <figure className="min-w-0" data-product-screenshot={view}>
       <div className="lp-window">
-        <div className="lp-chrome" aria-hidden="true">
-          <i /><i /><i />
-          <b>Sonar · {info.title}</b>
-        </div>
         <img src={src} alt={info.alt} width={1440} height={900}
           loading={priority ? "eager" : "lazy"} decoding="async"
           fetchPriority={priority ? "high" : "auto"} className="block h-auto w-full" />
       </div>
-      <figcaption className="lp-shot-cap">
-        <span>{info.title} · Current Sonar UI with sample data</span>
-        <a href={src} target="_blank" rel="noreferrer" className="dl-focus">
-          View full {info.title.toLowerCase()} screenshot
-        </a>
-      </figcaption>
     </figure>
   );
 }

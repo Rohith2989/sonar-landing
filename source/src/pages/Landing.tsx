@@ -22,6 +22,8 @@ import "../../ask-motion/ask-motion.css";
 import "../../ask-motion/feed-motion.css";
 import "../../people-scene/people-scene.css";
 import "../../ask-motion/ask-motion.mjs";
+import "../../page-polish/page-polish.css";
+import "../../page-polish/page-polish.mjs";
 
 type Vars = CSSProperties & Record<`--${string}`, string | number>;
 

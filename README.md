@@ -182,3 +182,16 @@ combination, API validation, unavailable-plan destinations, safe rendering and
 static/deployed parity. Browser checks include desktop, 820/390/320px layouts,
 all toggles, contact navigation and API-failure recovery. Screenshots and asset
 checks are saved locally under `.qa/pricing-scene/`.
+
+## Page cleanup and footer
+
+`source/page-polish/` removes decorative eyebrows, pulsing dots, screenshot
+chrome and sample-data captions from the landing page. Motion controls appear
+on keyboard focus instead of sitting over the artwork; reduced-motion support
+and all functional form, navigation and pricing labels remain intact.
+
+The landing and pricing routes share a deep-teal footer with a report CTA,
+three navigation columns and a large Sonar wordmark. The static build includes
+the footer directly, while the small runtime adapter preserves React-owned
+nodes after hydration. `npm run build` copies this module and its stylesheet.
+Desktop and mobile browser checks are saved locally under `.qa/page-polish/`.

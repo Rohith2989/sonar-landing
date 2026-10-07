@@ -2,6 +2,8 @@ import { useEffect, useRef } from 'react';
 import { pricingMarkup } from '../../pricing-scene/pricing-content.mjs';
 import { mountPricing } from '../../pricing-scene/pricing-controller.mjs';
 import '../../pricing-scene/pricing-scene.css';
+import '../../page-polish/page-polish.css';
+import '../../page-polish/page-polish.mjs';
 
 /** Shared presentation and lifecycle for the upstream React build. */
 export function PublicPricing({lazy = false}: {lazy?: boolean}) {

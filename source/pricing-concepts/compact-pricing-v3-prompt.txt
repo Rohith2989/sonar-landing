@@ -1,0 +1,43 @@
+Tool: built-in ImageGen
+Reference: source/pricing-concepts/kinetic-pricing-v2.png
+Purpose: Compact boxed pricing-card revision. Preview only.
+
+Use case: precise-object-edit / ui-mockup.
+Edit the supplied Sonar pricing mockup. The user likes this art direction and these exact three custom photographic objects, but says they are TOO BIG. Preserve the design identity, artwork subjects, accurate pricing, colors and typography. Recompose it as a polished compact conventional pricing section with THREE SMALLER BOXED PRICING CARDS. This is a targeted scale/layout refinement, not a new concept.
+
+Canvas: wide desktop screenshot about 1600 x 1100, warm ivory page, generous margins. Top small sonar. wordmark left, neat links Product / Niches / Pricing centered, Get a free report right. Compact centered headline "Small team. Big perspective." in one line at 64px-ish, smaller than the reference. Below one short supporting sentence "Choose how much of the market you want to see." Then a clean centered control row, selected "TikTok + Instagram" next to "One platform", and selected "Monthly" next to "Annual". Keep top introduction short.
+
+Main centerpiece: three EQUAL WIDTH rounded rectangular cards in a centered grid, about 340px wide by 510px tall in a 1600px desktop viewport, with 22px gutters. Clear card edges are wanted now. Hairline warm gray borders, very subtle soft shadow, 22px corner radius, lots of internal breathing room. Left and right cards near-white. Middle TEAM card has a very subtle pale sea-glass fill and a fine teal border. No huge photo collage crossing cards. These are compact usable pricing cards, all visible comfortably in one desktop screen along with header and Enterprise strip.
+
+In EACH card:
+Top left small tracked plan label "SOLO", "TEAM", "AGENCY".
+A SMALL decorative custom PNG cutout tucked neatly into the TOP RIGHT corner, maximum 125px high and 145px wide. Scale reference artwork down to about 35 percent of its previous visual size. These thumbnail sculptures should be delightful custom accents, never dominate the card. Keep full object visible within generous card padding. SOLO artwork is the identical sea-glass camera and tiny creator photo strip; TEAM artwork is the identical four fanned acrylic photographic creator contact sheets on a teal hub; AGENCY artwork is the identical curled filmstrip and teal spool. Accurate realistic materials, women within the small photo stills, restrained coral ribbon for each. REMOVE the long connecting ribbon between cards. Each object's little ribbon stays inside its own thumbnail. All three artworks sit at the same small scale near the top of the cards, with no large decorative stage area.
+Below plan label use modest dark teal bold benefit heading:
+Solo: "Find your angle."
+Team: "See the whole story."
+Agency: "Make every brand move."
+Give the artwork and heading clear separation, no overlap.
+Price, the primary focal point, huge crisp but not absurd, aligned across all cards:
+SOLO "$119" and small "/ month"
+TEAM "$349" and small "/ month"
+AGENCY "$899" and small "/ month"
+Then small muted "Billed monthly".
+Fine quiet horizontal divider.
+Two clear benefit rows with tiny teal check marks:
+SOLO: "1 niche" and "TikTok + Instagram"
+TEAM: "4 niches" and "TikTok + Instagram"
+AGENCY: "12 niches" and "TikTok + Instagram"
+Then small muted support lines:
+Solo "Your category, in focus."
+Team "More perspectives. One clear picture."
+Agency "A clearer view for every client."
+Full-width CTA near bottom of each card:
+"Choose Solo ↗" in dark teal
+"Choose Team ↗" in coral with dark teal text
+"Choose Agency ↗" in dark teal
+Use a small coral four-point star near TEAM label, but no invented popularity claim.
+Keep card heights, benefit rows, prices and CTAs aligned perfectly. No additional invented feature lists or blank oversized areas.
+
+Below the cards, 24px gap then a slim rounded dark teal enterprise strip matching full grid width, only about 90px tall. Exact copy "Enterprise" and "40 niches. A wider field of view." Left, "From $3,900 / month" and ivory compact button "Let's talk ↗" right. All text comfortably inside strip, vertically centered.
+
+The result must look like a real exceptionally elegant premium software pricing section, practical, tightly composed, with small custom animated-asset accents. Crisp flat web UI plus realistic miniature photographic cutouts. The user likes the prior concept; simply make the artwork much smaller and contained in nice cards so plans and pricing dominate. NO giant sculpture, oversized photos, artwork spilling outside cards, giant hero, new illustration concepts, animation diagram, motion blur, explanatory annotations, watermark. Retain all specified prices and copy.
