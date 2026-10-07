@@ -18,6 +18,8 @@ import { Turnstile, isTurnstileEnabled, type TurnstileHandle } from "@/component
 import { PublicPage } from "./Niches";
 import { DIRECTORY, fmt, niceDate } from "@/lib/niche-directory";
 import { ActiveMarkets } from "@/components/ActiveMarkets";
+import "../../ask-motion/ask-motion.css";
+import "../../ask-motion/ask-motion.mjs";
 
 type Vars = CSSProperties & Record<`--${string}`, string | number>;
 
@@ -363,39 +365,22 @@ const CAPABILITIES: Array<{ icon: "ground" | "cite" | "link"; lead: string; rest
   { icon: "link", lead: "Every video linked", rest: "one click from the answer to the source." },
 ];
 
-/** Rings, a sweep and the blips it catches. Pure decoration; the sweep is one rotating layer. */
-function Radar() {
-  const blips: Array<[number, number, number]> = [[64, 30, 0.9], [78, 58, 1.7], [40, 70, 3.1], [30, 38, 4.4], [58, 82, 2.4]];
-  return (
-    <div className="lp-radar" aria-hidden="true">
-      <svg viewBox="0 0 100 100">
-        {[48, 38, 28, 18, 8].map((r) => (
-          <circle key={r} cx="50" cy="50" r={r} fill="none" stroke="rgba(228,246,192,.13)" strokeWidth=".18" />
-        ))}
-        <path d="M50 2v96M2 50h96" stroke="rgba(228,246,192,.08)" strokeWidth=".15" />
-      </svg>
-      <div className="lp-sweep" />
-      {blips.map(([x, y, t], i) => (
-        // the sweep turns once per 6s from 12 o'clock; each blip lights as it passes its angle
-        <span key={i} className="lp-blip" style={{ left: `${x}%`, top: `${y}%`, "--t": `${t - 6}s` } as Vars} />
-      ))}
-    </div>
-  );
-}
-
 function Spotlight({ onIndexTotal }: { onIndexTotal: (total: number) => void }) {
   return (
-    <section id="how" className="lp-deep scroll-mt-24">
-      <Radar />
+    <section id="how" className="lp-deep lp-ask scroll-mt-24">
+      <div className="lp-ask-scene" aria-hidden="true">
+        <div className="lp-ask-frame">
+          <img className="lp-ask-poster" src="/landing/ask-motion/scene-poster.webp" width={1672} height={941} loading="lazy" decoding="async" alt="" />
+          <video className="lp-ask-video" muted playsInline loop preload="none" aria-hidden="true" tabIndex={-1} />
+        </div>
+      </div>
       <div className="lp-deep-inner">
         <div>
-          <span className="lp-eyebrow" style={{ color: "rgba(228,246,192,.8)" }}>How it works</span>
-          <h2 className="lp-display mt-6" data-lp="words">
-            <Words text="Ask about your market." /> <em><Words text="Read the receipts." offset={4} /></em>
-          </h2>
-          <p className="mt-6 max-w-[44ch] text-[16px] leading-relaxed text-[color:rgba(232,242,239,.72)]">
-            Sonar's agent answers from the index it has already built for your niche.
-          </p>
+          <header className="lp-ask-copy">
+            <span className="lp-ask-eyebrow"><span />Ask Sonar</span>
+            <h2>Good ideas.<br /><em>Real evidence.</em></h2>
+            <p>Ask about your market.<br />See the work behind the answer.</p>
+          </header>
           <ul className="mt-10">
             {CAPABILITIES.map((c, i) => (
               <li key={c.lead} className="lp-cap-row" data-lp="read">

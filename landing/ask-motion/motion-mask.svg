@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1672 941">
+  <defs>
+    <radialGradient id="soft"><stop offset="0.72" stop-color="white"/><stop offset="1" stop-color="white" stop-opacity="0"/></radialGradient>
+    <linearGradient id="bottom" x2="0" y2="1"><stop stop-color="white" stop-opacity="0"/><stop offset="0.6" stop-color="white"/></linearGradient>
+  </defs>
+  <!-- Preserve all props and the portrait's silhouette; reveal only face and distant clouds. -->
+  <ellipse cx="958" cy="189" rx="124" ry="151" fill="url(#soft)"/>
+  <ellipse cx="215" cy="120" rx="455" ry="262" fill="url(#soft)"/>
+  <ellipse cx="1518" cy="186" rx="260" ry="230" fill="url(#soft)"/>
+  <rect x="0" y="841" width="1672" height="100" fill="url(#bottom)"/>
+</svg>
