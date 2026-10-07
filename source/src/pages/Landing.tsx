@@ -20,6 +20,7 @@ import { DIRECTORY, fmt, niceDate } from "@/lib/niche-directory";
 import { ActiveMarkets } from "@/components/ActiveMarkets";
 import "../../ask-motion/ask-motion.css";
 import "../../ask-motion/feed-motion.css";
+import "../../people-scene/people-scene.css";
 import "../../ask-motion/ask-motion.mjs";
 
 type Vars = CSSProperties & Record<`--${string}`, string | number>;
@@ -616,65 +617,65 @@ function Pillars() {
 /* ── 5. personas — capability statements only, never invented outcomes ─────
    The photographs are illustrative (generated), not customers, and say so. */
 
-const PERSONAS: Array<{ key: string; name: string; lead: string; points: string[] }> = [
+const PERSONAS = [
   {
-    key: "brand",
-    name: "Brand marketers",
-    lead: "You own the channel plan. Sonar shows you the field.",
-    points: [
-      "See which competitors run creator programs — and which creators carry them.",
-      "Answer \"what changed this month\" with cited clips instead of screenshots.",
-      "Turn what already works in your niche into a brief your team can shoot.",
-    ],
+    "key": "lead",
+    "audience": "Brand marketers",
+    "word": "Lead.",
+    "title": "Set the direction.",
+    "description": "See the competitors, creators and content shaping your category.",
+    "action": "Explore your market",
+    "href": "#how"
   },
   {
-    key: "agency",
-    name: "Agencies",
-    lead: "Several brands at once, one scoped index each.",
-    points: [
-      "Every client niche is its own index — switch between them without starting over.",
-      "Reports are shareable links, so the client reads the same numbers you do.",
-      "Find creators already posting in a client's category, with their track record attached.",
-    ],
+    "key": "prove",
+    "audience": "Agencies",
+    "word": "Prove.",
+    "title": "Make the case.",
+    "description": "Give every client a clear view, with source videos behind the story.",
+    "action": "Bring the evidence",
+    "href": "#free-report"
   },
   {
-    key: "founder",
-    name: "Founders",
-    lead: "Marketing is one of your nine jobs. This one arrives mapped.",
-    points: [
-      "Start from your brand name — Sonar works out the niche and maps it.",
-      "See who actually drives your market's conversation before you spend on creators.",
-      "The free report shows the shape of your market before you commit to anything.",
-    ],
-  },
+    "key": "move",
+    "audience": "Founders",
+    "word": "Move.",
+    "title": "Find your opening.",
+    "description": "Understand the market before your next creator brief or launch.",
+    "action": "See where to start",
+    "href": "#free-report"
+  }
 ];
 
 function Personas() {
   return (
-    <section className="lp-people">
-      <div className="lp-head" data-lp="rise">
-        <span className="lp-eyebrow">Who it's for</span>
-        <h2 className="lp-display mt-6" data-lp="words"><Words text="Built around the person doing the work" /></h2>
-        <p>Different desks, same question: what is actually moving in my market, and who is driving it.</p>
+    <section id="people" className="lp-people lp-role-scene" aria-labelledby="people-heading">
+      <div className="lp-role-inner">
+        <header className="lp-role-header">
+          <div>
+            <span className="lp-role-eyebrow">Built for your next move</span>
+            <h2 id="people-heading">Different roles.<br />Same unfair clarity.</h2>
+          </div>
+          <p>For the people turning<br />market signals into action.</p>
+        </header>
+        <div className="lp-role-grid">
+          {PERSONAS.map((p, i) => (
+            <article key={p.key} className="lp-role" data-role={p.key} aria-labelledby={`people-${p.key}`}>
+              <span className="lp-role-label">0{i + 1} / {p.audience}</span>
+              <h3 id={`people-${p.key}`}>{p.word}</h3>
+              <div className="lp-role-art" aria-hidden="true">
+                <img src={`/landing/people-scene/${p.key}.webp`} width={1200} height={1020} loading="lazy" decoding="async" alt="" />
+              </div>
+              <div className="lp-role-copy">
+                <h4>{p.title}</h4>
+                <p>{p.description}</p>
+                <a href={p.href} aria-label={`${p.action} — ${p.audience}`}>{p.action}<span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+          ))}
+        </div>
+        <p className="lp-role-note">Illustrative photography.</p>
       </div>
-      <div className="lp-people-grid">
-        {PERSONAS.map((p, i) => (
-          <article key={p.key} className="lp-person" tabIndex={0} aria-label={p.name}>
-            <div className="lp-photo" data-lp="open" style={{ "--r": i * 4 } as Vars}>
-              <img src={`/landing/persona-${p.key}-bw.webp`} alt="" loading="lazy" decoding="async" width={960} height={1192} />
-              <img className="colour" src={`/landing/persona-${p.key}.webp`} alt="" loading="lazy" decoding="async" width={960} height={1192} />
-              <span className="lp-photo-tag"><b>0{i + 1}</b>{p.name}</span>
-              <div className="lp-photo-lead"><p>{p.lead}</p></div>
-            </div>
-            <ul data-lp="rise" style={{ "--r": i * 4 } as Vars}>
-              {p.points.map((pt) => (
-                <li key={pt}><Check /><span>{pt}</span></li>
-              ))}
-            </ul>
-          </article>
-        ))}
-      </div>
-      <p className="lp-note">Photography is illustrative.</p>
     </section>
   );
 }

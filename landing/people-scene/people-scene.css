@@ -1,0 +1,60 @@
+/* Photographs sit directly on the page. No panels, shape backplates or frames. */
+.lp-people[data-role-replaced] { display: none; }
+.lp-people.lp-role-scene {
+  padding: clamp(96px, 10vw, 160px) clamp(24px, 4vw, 76px) clamp(74px, 8vw, 130px);
+  background: transparent;
+  color: #0b3339;
+  scroll-margin-top: 100px;
+}
+.lp-role-inner { max-width: 1512px; margin-inline: auto; }
+.lp-role-header { display: grid; grid-template-columns: 1.7fr 1fr; align-items: end; column-gap: 42px; margin-bottom: clamp(44px, 5vw, 78px); }
+.lp-role-eyebrow, .lp-role-label { display: block; font: 500 10px/1.4 "Geist Mono Variable", monospace; letter-spacing: .24em; text-transform: uppercase; }
+.lp-role-eyebrow { margin-bottom: 24px; }
+.lp-role-header h2 { font: 780 clamp(42px, 5.05vw, 82px)/1.01 var(--lp-display); letter-spacing: -.065em; margin: 0; }
+.lp-role-header > p { margin: 0 0 5px; font: 450 clamp(18px, 1.8vw, 27px)/1.35 var(--sonar-sans); letter-spacing: -.025em; }
+.lp-role-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 3.2vw, 52px); }
+.lp-role { min-width: 0; display: flex; flex-direction: column; position: relative; isolation: isolate; }
+.lp-role-label { margin-bottom: 18px; font-size: 9px; }
+.lp-role h3 { position: relative; z-index: 0; font: 800 clamp(76px, 9.35vw, 150px)/.88 var(--lp-display); letter-spacing: -.075em; margin: 0; }
+.lp-role-art { position: relative; z-index: 1; width: calc(100% + 32px); margin: -38px -16px 0; aspect-ratio: 1200 / 1020; pointer-events: none; }
+.lp-role-art img { display: block; width: 100%; height: 100%; object-fit: contain; transform-origin: 50% 70%; transition: transform 650ms cubic-bezier(.2,.7,.2,1); }
+/* Feather the distant waist / wrist ends, never a face or a shared card edge. */
+.lp-role[data-role="lead"] img, .lp-role[data-role="move"] img { mask-image: linear-gradient(#000 0 82%, transparent 99%); }
+.lp-role[data-role="prove"] img { mask-image: linear-gradient(transparent, #000 17% 85%, transparent 100%); }
+.lp-role-copy { position: relative; z-index: 2; display: flex; flex-direction: column; flex: 1; padding-top: 8px; }
+.lp-role-copy h4 { font: 650 clamp(22px, 2.05vw, 32px)/1.12 var(--sonar-sans); letter-spacing: -.04em; margin: 0 0 12px; }
+.lp-role-copy p { font: 400 clamp(14px, 1.25vw, 19px)/1.5 var(--sonar-sans); letter-spacing: -.012em; color: #435961; margin: 0 0 20px; max-width: 36ch; }
+.lp-role-copy a { align-self: flex-start; display: inline-flex; align-items: center; gap: 12px; font: 550 13px/1.4 var(--sonar-sans); color: #175e63; text-decoration: none; padding: 0 0 5px; margin-top: auto; background-image: linear-gradient(currentColor, currentColor); background-size: 100% 1px; background-repeat: no-repeat; background-position: left bottom; }
+.lp-role-copy a span { transition: transform 250ms ease; }
+.lp-role-copy a:hover span { transform: translate(2px, -2px); }
+.lp-role-copy a:focus-visible { outline: 2px solid #175e63; outline-offset: 7px; border-radius: 2px; }
+.lp-role-note { margin: 36px 0 0; font: 400 10px/1.5 var(--sonar-sans); color: #788585; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .lp-role:hover .lp-role-art img, .lp-role:focus-within .lp-role-art img { transform: translateY(-5px) rotate(-.5deg); }
+  .lp-role[data-role="prove"]:hover .lp-role-art img { transform: translateY(-5px) rotate(.7deg); }
+}
+@media (max-width: 1000px) and (min-width: 761px) {
+  .lp-role-header { grid-template-columns: 1fr; gap: 22px; }
+  .lp-role-header > p br { display: none; }
+  .lp-role-label { font-size: 8px; letter-spacing: .16em; }
+  .lp-role-art { width: calc(100% + 24px); margin-inline: -12px; }
+}
+@media (max-width: 760px) {
+  .lp-people.lp-role-scene { padding: 82px 26px 76px; }
+  .lp-role-header { grid-template-columns: 1fr; gap: 24px; margin-bottom: 54px; }
+  .lp-role-header h2 { font-size: clamp(38px, 9.5vw, 61px); line-height: 1.04; }
+  .lp-role-header > p { font-size: 18px; max-width: 28ch; margin: 0; }
+  .lp-role-eyebrow { font-size: 9px; letter-spacing: .19em; margin-bottom: 23px; }
+  .lp-role-grid { grid-template-columns: minmax(0, 1fr); gap: 62px; max-width: 500px; margin-inline: auto; }
+  .lp-role-label { font-size: 10px; margin-bottom: 19px; }
+  .lp-role h3 { font-size: clamp(92px, 25vw, 145px); }
+  .lp-role-art { margin-top: -30px; width: calc(100% + 20px); margin-inline: -10px; }
+  .lp-role-copy { padding-top: 0; }
+  .lp-role-copy h4 { font-size: 28px; }
+  .lp-role-copy p { font-size: 16px; max-width: 34ch; margin-bottom: 18px; }
+  .lp-role-copy a { font-size: 13px; }
+  .lp-role-note { margin-top: 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lp-role-art img, .lp-role-copy a span { transition: none; transform: none; }
+}

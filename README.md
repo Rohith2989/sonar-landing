@@ -19,7 +19,7 @@ The redesigned public landing page for 8X Sonar, the social-listening index of T
 2. **The index** — real index numbers only (dated, aggregate), and the niche directory drifting past.
 3. **Ask Sonar** — a compact photographic phone-and-lens film beside the live index lookup, with a gentle sea-glass cloud drift.
 4. **One index, four ways in** — S-01 to S-04 sheets that stack as you scroll.
-5. **Built around the person doing the work** — photo cards that bloom from black and white into colour.
+5. **Lead. Prove. Move.** — three borderless photographic cutouts for brand marketers, agencies and founders, with real role-specific links.
 6. **Pricing**, then the free-report close over a second painted sky.
 
 Scroll motion uses compositor-only CSS scroll timelines; the hero's pose animation
@@ -126,3 +126,25 @@ The script requires `google-genai` and reads `GEMINI_API_KEY` from the environme
 or a hidden prompt. It never saves the key, and no API credentials ship to the browser.
 A saved operation in `.qa/` resumes the existing render; use a fresh `--operation`
 path to request a new render deliberately.
+
+## People / Lead. Prove. Move.
+
+The approved editorial composition is implemented as semantic HTML with three
+transparent photographic cutouts, not a flattened screenshot. Colored backplates,
+contour frames and card dividers are removed. CSS feathers only the distant waist
+and wrist ends into the page. Headings, copy and links remain selectable and adapt
+from three desktop columns to a single mobile column. A small hover lift respects
+reduced motion. Links lead to the existing market lookup and free-report form.
+
+Built-in ImageGen created the assets in `source/people-scene/assets/`; exact prompts
+are in `source/people-scene/generation-prompts.json`. `npm run build:people` optimizes
+them into 1200×1020 WebP files with alpha (under 600 KB combined). `npm run build`
+copies the editable modules and styles and updates both static entry points. The
+reference JSX in `source/src/pages/Landing.tsx` matches the new layout.
+
+The static snapshot includes the finished section. After the existing compiled
+React bundle hydrates, `people-scene.mjs` inserts the presentation beside its
+original section and hides the original only after successful insertion. React's
+nodes remain intact, and removed routes release their inserted scenes. No forms,
+API contracts or other sections are replaced. Desktop and mobile screenshots are
+saved locally under `.qa/people-scene/`; use `/#people` to review the section.
