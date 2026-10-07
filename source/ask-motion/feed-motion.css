@@ -1,0 +1,96 @@
+/* Approved phone-and-lens film; scoped so both portrait backups stay intact. */
+.lp-deep.lp-ask.lp-feed {
+  --feed-panel-height: clamp(540px, 41vw, 680px);
+  --feed-inset: clamp(28px, 4.2vw, 80px);
+  background: #e5efea;
+  border-radius: 26px;
+  margin: 48px 24px 0;
+  padding-top: 0;
+}
+.lp-feed .lp-ask-scene { inset: 0 0 auto; height: var(--feed-panel-height); }
+.lp-feed .lp-ask-scene::after { display: none; }
+.lp-feed .lp-ask-frame {
+  top: 50%; left: auto; right: -6%; width: 67%;
+  aspect-ratio: 16 / 9; transform: translateY(-46%);
+  -webkit-mask-image: linear-gradient(#000 76%, transparent 100%);
+  mask-image: linear-gradient(#000 76%, transparent 100%);
+}
+.lp-feed .lp-ask-portrait-rest, .lp-feed .lp-ask-film { -webkit-mask-image: none; mask-image: none; }
+.lp-feed-clouds {
+  position: absolute; width: 82%; height: 100%; right: -8%; top: 0;
+  object-fit: cover; opacity: .65;
+  -webkit-mask-image: radial-gradient(ellipse at 60% 65%, #000 8%, transparent 70%);
+  mask-image: radial-gradient(ellipse at 60% 65%, #000 8%, transparent 70%);
+  animation: lp-feed-cloud-drift 42s ease-in-out infinite alternate paused;
+}
+.lp-feed[data-ask-motion="playing"] .lp-feed-clouds { animation-play-state: running; }
+@keyframes lp-feed-cloud-drift {
+  from { transform: translate(-.5%, 0) scale(1.02); }
+  to { transform: translate(1%, -.5%) scale(1.035); }
+}
+.lp-feed .lp-deep-inner {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: auto auto 1fr auto;
+  min-height: calc(var(--feed-panel-height) + 174px);
+  padding: clamp(54px, 5vw, 88px) var(--feed-inset) 0;
+}
+.lp-feed .lp-ask-copy { grid-column: 1; grid-row: 1; width: 100%; min-height: 0; padding: 0; }
+.lp-feed .lp-ask-eyebrow { margin-bottom: 27px; font-size: 10px; letter-spacing: .24em; }
+.lp-feed .lp-ask-copy h2 {
+  font-size: clamp(48px, 5.35vw, 88px); line-height: .99;
+  letter-spacing: -.065em; color: #103a3e;
+}
+.lp-feed .lp-ask-copy h2 em { color: inherit; }
+.lp-feed .lp-ask-copy h2 em::after { width: 98%; height: .045em; bottom: -.08em; background: #f47862; }
+.lp-feed .lp-ask-copy p { font-size: clamp(16px, 1.55vw, 23px); margin: 25px 0 0; line-height: 1.5; }
+.lp-feed .lp-console { grid-column: 1; grid-row: 2; width: 100%; max-width: 500px; margin: 30px 0 0; }
+.lp-feed .lp-console form {
+  border: 1px solid #d5ded5; border-radius: 20px;
+  background: #fcfaf4; padding: 20px 20px 16px; box-shadow: 0 6px 24px -18px #254c4b44;
+}
+.lp-feed .lp-console form::before { display: none; }
+.lp-feed .lp-console form:focus-within { box-shadow: 0 0 0 3px #2a827935; }
+.lp-feed .lp-console input { font-size: 18px; padding-right: 44px; }
+.lp-feed .lp-console button[type="submit"] { width: 45px; height: 45px; top: 35px; right: 13px; background: #103f43; }
+.lp-feed .lp-console button[type="submit"] svg { width: 21px; height: 21px; }
+.lp-feed .lp-console form > div:last-child { margin-top: 18px; min-height: 23px; }
+.lp-feed .lp-console form > div:last-child > span { padding: 5px 9px; font-size: 10px; box-shadow: none; background: #e9efea; }
+.lp-feed .lp-console .lp-console-note { text-align: left; padding: 12px 2px 0; font-size: 11px; color: #55716c; }
+.lp-feed .lp-deep-inner > div:first-child > ul {
+  grid-column: 1 / -1; grid-row: 4; width: 100%; max-width: none;
+  margin: 44px 0 0; gap: 32px;
+}
+.lp-feed .lp-cap-row { padding-top: 22px; border-top-color: #ccdbd3; }
+.lp-feed .lp-markets { max-width: none; padding: 40px var(--feed-inset) 48px; }
+.lp-feed .lp-ask-control { top: 20px; right: 22px; font-size: 10px; }
+@media (max-width: 1100px) and (min-width: 761px) {
+  .lp-deep.lp-ask.lp-feed { --feed-panel-height: 530px; margin-inline: 16px; }
+  .lp-feed .lp-ask-frame { width: 74%; right: -12%; }
+  .lp-feed .lp-ask-copy h2 { font-size: clamp(44px, 5.4vw, 59px); }
+  .lp-feed .lp-ask-copy p { font-size: 16px; }
+  .lp-feed .lp-console input { font-size: 15px; }
+  .lp-feed .lp-deep-inner > div:first-child > ul { gap: 18px; }
+}
+@media (max-width: 760px) {
+  .lp-deep.lp-ask.lp-feed { --feed-panel-height: 750px; --feed-inset: 24px; margin: 30px 10px 0; border-radius: 22px; }
+  .lp-feed .lp-deep-inner { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto 310px auto; padding: 45px 24px 0; min-height: 0; }
+  .lp-feed .lp-ask-copy { background: none; padding: 0; min-height: 0; width: 100%; }
+  .lp-feed .lp-ask-eyebrow { margin-bottom: 24px; font-size: 9px; }
+  .lp-feed .lp-ask-copy h2 { font-size: clamp(44px, 10.8vw, 64px); }
+  .lp-feed .lp-ask-copy p { margin-top: 20px; font-size: 16px; }
+  .lp-feed .lp-console { width: 100%; margin-top: 26px; }
+  .lp-feed .lp-console form { padding: 20px 16px 15px; border-radius: 17px; }
+  .lp-feed .lp-console input { font-size: 16px; }
+  .lp-feed .lp-console button[type="submit"] { width: 38px; height: 38px; right: 12px; top: 33px; }
+  .lp-feed .lp-console .lp-console-note { font-size: 10px; padding-top: 10px; }
+  .lp-feed .lp-ask-scene { top: var(--feed-art-top, 394px); height: 310px; }
+  .lp-feed .lp-ask-frame { top: 50%; width: 137%; max-width: 730px; right: 50%; transform: translate(50%, -50%); }
+  .lp-feed-clouds { width: 140%; right: -20%; opacity: .55; }
+  .lp-feed .lp-deep-inner > div:first-child > ul { grid-row: 4; grid-column: 1; margin-top: 0; grid-template-columns: 1fr; gap: 0; }
+  .lp-feed .lp-cap-row { padding: 19px 0; }
+  .lp-feed .lp-markets { padding: 16px 24px 32px; }
+  .lp-feed .lp-ask-control { top: 26px; right: 18px; padding: 6px 9px; font-size: 9px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lp-feed-clouds { animation: none; }
+}

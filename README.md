@@ -17,7 +17,7 @@ The redesigned public landing page for 8X Sonar, the social-listening index of T
 
 1. **Hero** — a pinned stage of depth layers over a living painted sky: sonar rings, a two-tone headline, the woman holding *The Sonar Report*, hands with a camera and headphones reaching in from the edges. Scrolling parts the layers while the dashboard rises over them in a browser window.
 2. **The index** — real index numbers only (dated, aggregate), and the niche directory drifting past.
-3. **Ask Sonar** — a photographic campaign director over a sea-glass sky, with twelve complete portrait poses and drifting clouds behind the existing live index lookup.
+3. **Ask Sonar** — a compact photographic phone-and-lens film beside the live index lookup, with a gentle sea-glass cloud drift.
 4. **One index, four ways in** — S-01 to S-04 sheets that stack as you scroll.
 5. **Built around the person doing the work** — photo cards that bloom from black and white into colour.
 6. **Pricing**, then the free-report close over a second painted sky.
@@ -72,47 +72,57 @@ both static entry points. The matching CSS fallback also lives in
 
 ## Ask Sonar scene
 
-The campaign director uses twelve complete transparent portrait poses: hair,
-glasses, face, neck and body move together. A static phone and magnifying glass
-sit above her, with a separate sea-glass cloud background drifting over 38 seconds.
-There is no inner-face video mask. The portrait uses an eight-second stepped clock,
-with longer reading/smile holds and the same resting pose on both sides of the loop.
+The approved “Go beyond the scroll” composition uses two photographic female hands,
+a phone showing a skincare creator, and a real optical magnifier inspecting her
+serum bottle. The 8-second master is a fresh Gemini `veo-3.1-generate-preview`
+quality generation at 1920×1080, 24fps. All 192 video frames are retained.
+The two rear clips stay subtle; cloud motion is a separate 42-second CSS drift.
 
-The approved composition is `source/ask-motion/assets/scene.png`. Built-in image
-generation produced three separate assets from it: `portrait-green.png`,
-`cloud-background.png` and `foreground-props.png`. Their exact prompts are saved
-in `source/ask-motion/*-image-prompt.txt`. The portrait animation master is
-`portrait-green-veo.mp4`, generated at 1080p using the quality
-`veo-3.1-generate-preview` model with matching first/last images and
-`portrait-motion-prompt.txt`. The earlier `scene-veo.mp4` remains as generation
-history; it is not loaded by the page. All photography is illustrative.
+`source/ask-motion/assets/closer-feed-focus.png` is the matching first/last
+reference, made with built-in ImageGen. The initial plate and edit prompts are
+`closer-feed-image-prompt.txt` and `closer-feed-focus-image-prompt.txt`. The final
+video prompt is `closer-feed-video-v2-prompt.txt`, and the approved section and
+storyboard are under `source/ask-motion/previews/closer-feed-*`.
 
-`npm run build:ask` selects the twelve source times in `portrait-timeline.mjs`,
-removes chroma green with FFmpeg, and writes two transparent WebP atlases
-(1.36 MB together), plus a matching resting portrait and manifest. This requires
-Python's `imageio-ffmpeg` package and the existing Sharp dependency. Then run
-`npm run build` to copy the controller, timeline and CSS, and update both static
-entry points. `source/src/pages/Landing.tsx` has the matching layout for upstream.
-The live lookup's React nodes, validation and API contract are preserved.
+`npm run build:ask-video` keys the source master offline and creates transparent
+VP9 WebM and HEVC MOV, plus an exact first-frame WebP fallback. It requires Python
+`imageio-ffmpeg`, Sharp, and macOS/Xcode command-line tools for HEVC alpha encoding.
+Built media is committed, so normal builds need only Node. `npm run build` copies
+the modules and wires both static entry points. The upstream reference JSX is
+updated too; the live React lookup nodes, validation and API contract are preserved.
 
-Atlases load only when the scene enters the viewport. The clock stops off screen
-and in hidden tabs. The motion control pauses both portrait and clouds. Reduced
-motion loads the still layers without requesting atlases; failed media retains
-a complete still. `?ask-time=3#how` pauses the scene at a specific time for review.
-The mobile layout places the headline above a closer portrait crop.
+The film loads only when visible and pauses off screen or in a hidden tab.
+The visible control pauses both film and clouds. Reduced motion displays the
+matching still without requesting video. A decoded-alpha probe rejects formats
+that would expose an opaque rectangle, tries the other codec, then retains the
+still if neither works. Resize observation keeps mobile artwork below expanding
+lookup results. Media requests support byte ranges in the local preview server.
 
-Tests check loop boundaries, whole-hair silhouette changes, alpha transparency,
-media size, shipped-source parity, and playback lifecycle/failure behavior.
-Actual before/after browser recordings are saved locally under `.qa/` (gitignored).
+Review URLs:
+- `/#how` — approved phone-and-lens film.
+- `/?ask-time=6#how` — pause at a specific video time.
+- `/?ask-motion=portrait#how` — prior smooth portrait video backup.
+- `/?ask-motion=poses#how` — original twelve-pose backup.
 
-Regeneration is explicit and separate from the build:
+The backup media loads only when explicitly selected. `npm run build:ask` still
+rebuilds the twelve poses; `npm run build:ask-video -- --name portrait-fluid`
+rebuilds the prior smooth portrait. The local `codex/ask-12-frame-backup` branch
+preserves the earlier complete implementation.
+
+Tests cover deployed parity, video/atlas lifecycle, codec fallback, reduced
+motion, autoplay failure and the hero timeline. Actual browser recordings and
+video validation are saved locally under `.qa/` (gitignored).
+
+Fresh regeneration is explicit and separate from the build:
 
 ```sh
 python3 scripts/generate-ask-video.py \
-  --input source/ask-motion/assets/portrait-green.png \
-  --prompt source/ask-motion/portrait-motion-prompt.txt \
-  --output source/ask-motion/assets/portrait-green-veo.mp4
+  --input source/ask-motion/assets/closer-feed-focus.png \
+  --prompt source/ask-motion/closer-feed-video-v2-prompt.txt \
+  --output source/ask-motion/assets/closer-feed-veo.mp4
 ```
 
 The script requires `google-genai` and reads `GEMINI_API_KEY` from the environment
 or a hidden prompt. It never saves the key, and no API credentials ship to the browser.
+A saved operation in `.qa/` resumes the existing render; use a fresh `--operation`
+path to request a new render deliberately.

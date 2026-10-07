@@ -19,6 +19,7 @@ import { PublicPage } from "./Niches";
 import { DIRECTORY, fmt, niceDate } from "@/lib/niche-directory";
 import { ActiveMarkets } from "@/components/ActiveMarkets";
 import "../../ask-motion/ask-motion.css";
+import "../../ask-motion/feed-motion.css";
 import "../../ask-motion/ask-motion.mjs";
 
 type Vars = CSSProperties & Record<`--${string}`, string | number>;
@@ -367,15 +368,14 @@ const CAPABILITIES: Array<{ icon: "ground" | "cite" | "link"; lead: string; rest
 
 function Spotlight({ onIndexTotal }: { onIndexTotal: (total: number) => void }) {
   return (
-    <section id="how" className="lp-deep lp-ask scroll-mt-24">
+    <section id="how" className="lp-deep lp-ask lp-feed scroll-mt-24" data-ask-design="feed">
       <div className="lp-ask-scene" aria-hidden="true">
+        <img className="lp-feed-clouds" src="/landing/ask-motion/cloud-background.webp" width="1672" height="941" loading="lazy" alt="" />
         <div className="lp-ask-frame">
-          <img className="lp-ask-poster" src="/landing/ask-motion/scene-poster.webp" width={1672} height={941} loading="lazy" decoding="async" alt="" />
+          <img className="lp-ask-poster" src="/landing/ask-motion/closer-feed-rest.webp" width={1920} height={1080} loading="lazy" decoding="async" alt="" />
           <div className="lp-ask-layers">
-            <img className="lp-ask-clouds" src="/landing/ask-motion/cloud-background.webp" width="1672" height="941" loading="lazy" alt="" />
-            <img className="lp-ask-portrait-rest" src="/landing/ask-motion/portrait-rest.webp" width="1280" height="720" loading="lazy" alt="" />
-            <canvas className="lp-ask-portrait" width="1280" height="720" />
-            <img className="lp-ask-props" src="/landing/ask-motion/foreground-props.webp" width="1672" height="941" loading="lazy" alt="" />
+            <img className="lp-ask-portrait-rest" src="/landing/ask-motion/closer-feed-rest.webp" width="1920" height="1080" loading="lazy" alt="" />
+            <video className="lp-ask-film" width="1920" height="1080" muted playsInline loop preload="none" aria-hidden="true" tabIndex={-1} />
           </div>
         </div>
       </div>
@@ -383,8 +383,8 @@ function Spotlight({ onIndexTotal }: { onIndexTotal: (total: number) => void }) 
         <div>
           <header className="lp-ask-copy">
             <span className="lp-ask-eyebrow"><span />Ask Sonar</span>
-            <h2>Good ideas.<br /><em>Real evidence.</em></h2>
-            <p>Ask about your market.<br />See the work behind the answer.</p>
+            <h2>Go beyond<br />the <em>scroll.</em></h2>
+            <p>Ask about your market.<br />See the videos behind the answer.</p>
           </header>
           <ul className="mt-10">
             {CAPABILITIES.map((c, i) => (

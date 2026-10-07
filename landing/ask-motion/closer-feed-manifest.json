@@ -1,0 +1,22 @@
+{
+  "version": 3,
+  "model": "veo-3.1-generate-preview",
+  "resolution": "1920x1080",
+  "fps": 24,
+  "duration": 8,
+  "frames": 192,
+  "audio": false,
+  "source": "source/ask-motion/assets/closer-feed-veo.mp4",
+  "prompt": "source/ask-motion/closer-feed-video-v2-prompt.txt",
+  "delivery": [
+    {
+      "src": "closer-feed.webm",
+      "codec": "VP9 with alpha"
+    },
+    {
+      "src": "closer-feed-hevc.mov",
+      "codec": "HEVC with alpha"
+    }
+  ],
+  "backup": "?ask-motion=poses#how"
+}

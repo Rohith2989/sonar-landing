@@ -1,0 +1,14 @@
+Create a refined, photorealistic eight-second seamless product-film loop from this exact image. Preserve the phone, both real female hands, their anatomy and warm brown skin, the dark teal optical magnifying glass, the female skincare creator holding her ivory serum bottle on the phone, and the two subtle rear portrait clips. This is a locked-off editorial commercial shot, with the camera completely still. Keep scale, framing, composition and lighting identical throughout. No cuts or camera moves.
+
+One single deliberate motion: the right hand slowly raises the real glass up and left over the SERUM BOTTLE in the LOWER HALF of the phone, holds, then returns. The circular lens must travel with its connected handle and the naturally moving hand. The phone and left hand stay steady. The optical glass must become a REAL clear magnifier when passing in front of the screen: show the same bottle and hand from the underlying screen, aligned with them and enlarged about 1.3x INSIDE the lens only. Do not magnify the creator's face, create a second bottle, or paste an image onto the glass. Outside the phone the glass is transparent, showing the flat green background.
+
+Timing:
+0.0–0.8s: calm opening hold matching the supplied first frame, lens low-right outside phone.
+0.8–3.0s: smoothly raise the lens up-left, centering it precisely on the serum bottle at the lower-middle screen. The creator's FACE stays entirely above the lens.
+3.0–5.1s: hold this magnified product detail with a delicate natural wrist settling and tiny warm light glint on the metal rim.
+5.1–7.2s: lower the lens back along the same graceful path to the exact initial low-right pose.
+7.2–8.0s: settle into the supplied final frame. Initial and final poses must match for a seamless repeating loop.
+
+Secondary motion is extremely subtle: one natural blink from the creator and slight fingers settling around her bottle, with gaze staying DOWN at her product. No talking, large head movements or eyes looking up. The two rear clips breathe almost imperceptibly, never move their frames. Real organic easing, smooth continuous temporal detail, no stop motion.
+
+Maintain absolutely uniform pure bright green #00FF00 everywhere outside the photographic objects for the ENTIRE video. The empty lens shows this same green. No cloud/background generation, background changes, glow, cast shadows on the green, lens flare or particles. Preserve razor-clean object edges and fine photographic skin detail. Correct hand anatomy without morphing, extra fingers, detached objects or bending phone. Do not add words, logos, people or UI elements. No sound or music. Premium soothing high-end practical product cinematography.

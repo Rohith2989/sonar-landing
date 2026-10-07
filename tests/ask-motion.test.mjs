@@ -9,14 +9,15 @@ test('both entry points expose the Ask heading and keep the real lookup form', a
     const html = await readFile(file, 'utf8');
     assert.equal(html.split('<!-- sonar-ask-motion -->').length - 1, 1);
     assert.equal(html.split('class="lp-ask-scene"').length - 1, 1);
-    assert.ok(html.includes('<h2>Good ideas.<br><em>Real evidence.</em></h2>'));
+    assert.ok(html.includes('<h2>Go beyond<br>the <em>scroll.</em></h2>'));
     const section = html.slice(html.indexOf('<section id="how"'), html.indexOf('<section id="product"'));
     assert.match(section, /<input[^>]*aria-label="Enter your niche"[^>]*required=""[^>]*maxLength="60"/);
     assert.match(section, /<button type="submit" aria-label="Run this query"/);
-    assert.match(section, /<canvas class="lp-ask-portrait" width="1280" height="720"><\/canvas>/);
+    assert.match(section, /<video class="lp-ask-film"[^>]*muted playsinline loop preload="none"/);
+    assert.doesNotMatch(section, /<canvas|portrait-fluid|scene-poster.webp/);
     assert.doesNotMatch(section, /lp-ask-video|motion-mask/);
   }
-  for (const file of ['ask-motion.mjs', 'ask-markup.mjs', 'ask-motion.css', 'portrait-timeline.mjs']) {
+  for (const file of ['feed-markup.mjs', 'feed-video.mjs', 'feed-motion.css', 'ask-motion.mjs', 'ask-video.mjs', 'ask-poses.mjs', 'ask-markup.mjs', 'ask-motion.css', 'portrait-timeline.mjs']) {
     assert.equal(await readFile(`source/ask-motion/${file}`, 'utf8'), await readFile(`landing/ask-motion/${file}`, 'utf8'));
   }
 });

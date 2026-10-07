@@ -1,0 +1,22 @@
+{
+  "version": 3,
+  "model": "veo-3.1-generate-preview",
+  "resolution": "1920x1080",
+  "fps": 24,
+  "duration": 8,
+  "frames": 192,
+  "audio": false,
+  "source": "source/ask-motion/assets/portrait-fluid-veo.mp4",
+  "prompt": "source/ask-motion/transparent-video-prompt.txt",
+  "delivery": [
+    {
+      "src": "portrait-fluid.webm",
+      "codec": "VP9 with alpha"
+    },
+    {
+      "src": "portrait-fluid-hevc.mov",
+      "codec": "HEVC with alpha"
+    }
+  ],
+  "backup": "?ask-motion=poses#how"
+}

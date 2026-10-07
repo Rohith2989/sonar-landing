@@ -5,7 +5,7 @@ import { readFile } from 'node:fs/promises';
 import { DURATION, frameAt } from '../source/ask-motion/portrait-timeline.mjs';
 
 // Exercise the shipped controller against browser events and a controllable RAF.
-const source = (await readFile('source/ask-motion/ask-motion.mjs', 'utf8'))
+const source = (await readFile('source/ask-motion/ask-poses.mjs', 'utf8'))
   .replace(/^import .*;\n/gm, '')
   .replace('export function', 'function')
   .replaceAll('import.meta.url', '"https://preview.test/landing/ask-motion/ask-motion.mjs"');

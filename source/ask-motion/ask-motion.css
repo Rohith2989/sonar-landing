@@ -22,8 +22,10 @@
   to { transform: scale(1.025) translate(.5%, -.3%); }
 }
 /* Only the waist dissolves into the clouds. Every curl moves with her head. */
-.lp-ask-portrait, .lp-ask-portrait-rest { -webkit-mask-image: linear-gradient(#000 76%, transparent 97%); mask-image: linear-gradient(#000 76%, transparent 97%); }
-.lp-ask-portrait { opacity: 0; }
+.lp-ask-portrait, .lp-ask-portrait-rest, .lp-ask-film { -webkit-mask-image: linear-gradient(#000 76%, transparent 97%); mask-image: linear-gradient(#000 76%, transparent 97%); }
+.lp-ask-portrait, .lp-ask-film { opacity: 0; }
+.lp-ask-film-ready .lp-ask-film { opacity: 1; }
+.lp-ask-film-ready .lp-ask-portrait-rest { opacity: 0; }
 .lp-ask-pose-ready .lp-ask-portrait { opacity: 1; }
 .lp-ask-pose-ready .lp-ask-portrait-rest { opacity: 0; }
 .lp-ask .lp-deep-inner { z-index: 1; max-width: none; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; }
@@ -102,7 +104,7 @@
   .lp-ask-control { right: 16px; top: 30px; padding: 6px 9px; font-size: 9px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .lp-ask-portrait { display: none; }
+  .lp-ask-portrait, .lp-ask-film { display: none; }
   .lp-ask-portrait-rest { opacity: 1 !important; }
   .lp-ask-clouds { animation: none; }
   .lp-ask-control { display: none; }
