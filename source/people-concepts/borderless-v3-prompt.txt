@@ -1,0 +1,15 @@
+Edit the attached approved Sonar website mockup. Make ONE precise refinement: remove all visible box edges, frame outlines, container strokes and column dividers so the section is completely BORDERLESS.
+
+Preserve exactly the current composition, layout, sizing, typography, all wording, photographic people and their identities, camera, creator-video strips, tablet, hands, coral fabric ribbon, colors and placement. Preserve the three custom-shaped pale sea-glass / pale peach background areas behind the photography, but make them flat, softly integrated shapes with NO outlines. Keep the photography naturally breaking out of those shapes. The result should feel like three editorial photographic compositions sitting directly on the warm ivory page, never enclosed in cards or flexbox-like containers.
+
+Specifically remove:
+- Every thin dark teal contour around all three custom photo frames.
+- The white inset/keyline edge or border gap around those shapes.
+- The offset coral outline around the right-hand shape.
+- The isolated coral frame tab on the upper right of the left shape.
+- Both thin vertical separator rules between the three lower text columns.
+- Any visible panel rim, border, stroke, corner bracket, framing line, or shadow suggesting an enclosing box.
+
+The subtle custom shape silhouettes should remain, but their outer edges blend gently and quietly into the ivory page, without a hard graphic perimeter. Avoid obvious rectangular, folder or card boundaries. Keep the skin, hair, clothing, objects and individual creator video photos sharply photographic; do not blur the subjects. The physical tablet bezel, camera edges, and physical fabric ribbon must stay because they are real objects, not container borders. Preserve the thin text-link underlines at the bottom; those are intentional link styling, not boxes.
+
+Everything else stays faithful to the approved image: "Different roles. Same unfair clarity.", the role labels, giant "Lead." / "Prove." / "Move.", all lower copy, navigation and whitespace. Do not redesign, add new objects, change poses, invent text, add gradients or create a new concept. Same landscape canvas and high image quality. A clean borderless final image.

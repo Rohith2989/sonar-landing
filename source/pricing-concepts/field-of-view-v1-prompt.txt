@@ -1,0 +1,40 @@
+Tool: built-in ImageGen
+Reference: .qa/people-scene/desktop.png
+
+Use case: ui-mockup.
+Create ONE extremely polished desktop pricing-page design image for "sonar.", a social listening product for marketers. This is a real website design proposal, with beautifully typeset readable UI and a striking photographic art direction. Wide desktop page, approximately 1600px wide by 1400px high. Deliver the whole composition without browser chrome.
+
+REFERENCE: Image 1 is the existing Sonar website. Match its warm almost-white canvas, very dark ink-teal, heavy tight grotesk typography, small monospaced eyebrow labels, natural photography, sea-glass accents and restrained coral. Create a NEW pricing composition, do not recreate the reference's three people or Lead Prove Move section.
+
+Creative idea: "Choose your field of view." A luxury editorial photography spread meets a meticulously clear pricing page. The memorable hero is a tangible oversized optical loupe, deep teal knurled metal body and clear thick glass, hovering just above an elegantly curling glossy contact sheet of short-form creator videos. The lens magnifies one crisp realistic portrait of a female skincare creator applying cream; several other small photographic frames feature female fitness, coffee and beauty creators in their real settings. A warm-brown female hand naturally holds the loupe at the far right, her wrist and cream sleeve receding organically into the page edge. Natural skin texture, physically correct optics, tactile print highlights, fine shadow detail. The contact sheet curves in one graceful wide S across the right half and spills subtly toward the pricing below. A narrow coral silk strand makes one restrained accent gesture. Beautiful expensive campaign photography, not illustration or CGI-looking humans. This is an isolated borderless collage directly on the page; absolutely no rectangular colored backdrop or enclosing decorative blob. The graphic supports the typography and prices, never obscures them.
+
+PAGE LAYOUT:
+1. Slim generous top navigation: left "sonar." wordmark, center "Product   Niches   Pricing" with Pricing active; right "Sign in" and a dark teal pill "Get a free report". Main content margins about 90px.
+2. Asymmetric hero taking the upper third. Left tiny spaced mono eyebrow "PRICING / A CLEARER VIEW". Under it monumental heavy dark teal headline in three beautifully composed lines: "Choose your" / "field of" / "view." Very large typography, balanced purposeful whitespace. Small support line below: "From one niche to your whole client roster." On the right, the single integrated optical-loupe and creator-contact-sheet photographic composition described above, approximately 45% page width. Keep all photo elements secondary to headline and UI. It should feel dynamic but sophisticated.
+3. Beneath hero a very clean horizontal control row. Left compact segmented control "One platform" and selected "TikTok + Instagram". Right "Monthly" selected and "Annual" with tiny "1 month on us" note. Selected controls dark teal, very spare fine rules.
+4. Pricing is an OPEN TYPOGRAPHIC COMPARISON across three equally aligned generous columns on the same white canvas. No individual card rectangles, no shadows, no rounded plan containers, no colored enclosing panels. Only very fine horizontal editorial rules and generous gutters. Huge dark teal prices with confident alignment, legible differentiated hierarchies.
+Column 1 exact copy:
+"01 / SOLO"
+"For your next big idea."
+"$119" with small "/ month"
+"1 niche"
+"TikTok + Instagram"
+"Explore Solo ↗"
+Column 2 exact copy:
+"02 / TEAM"
+"For your next big move."
+"$349" with small "/ month"
+"4 niches"
+"TikTok + Instagram"
+"Explore Team ↗"
+Column 3 exact copy:
+"03 / AGENCY"
+"For every brand you build."
+"$899" with small "/ month"
+"12 niches"
+"TikTok + Instagram"
+"Explore Agency ↗"
+Use a coral small four-point editorial asterisk near TEAM and a tiny uppercase "ROOM TO GROW" accent, not an unsubstantiated most-popular badge. The middle CTA can be a strong dark teal pill to establish focus; other CTAs understated underlined text. Prices and buttons must align perfectly across columns. Actual values are critical. These are monthly both-platform prices.
+5. At the bottom a sleek full-width dark ink-teal editorial footer strip for Enterprise, generous internal padding, NO floating card: left small "ENTERPRISE / 40 NICHES" and large "A wider world to watch."; right "From $3,900 / month" and compact ivory "Let's talk ↗". Add a little elegantly cropped contact-sheet photo at the far edge only if composition has room.
+
+Precision: retain calm spaciousness while still giving the visual impact of a premium award-level brand page. All supplied text spelled correctly, substantial readable size. Restrict text to the copy specified. No invented statistics, logos, testimonials, feature claims, discounts beyond the supplied annual note, or extraneous fine print. No charts, dashboard screenshots, generic SaaS icon cards, neon gradients, fake sci-fi interfaces, rockets, coins, globes, men, cartoon people, huge unrelated portraits, drop-shadow pricing cards, grainy AI aesthetic, watermarks. Make this look like a finished carefully art-directed website screenshot.

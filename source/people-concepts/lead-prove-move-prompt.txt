@@ -1,0 +1,41 @@
+Create one exceptionally art-directed WEBSITE SECTION DESIGN for Sonar, a social listening product. The user has rejected generic stock photographs of people at laptops, desk flat lays, corporate offices, and ordinary SaaS persona cards. This must be a substantially new visual idea, not a variation of those. Design theme: "THREE ROLES, THREE NEXT MOVES." An editorial fashion-magazine quality photographic triptych, integrated with monumental typography and clear marketing jobs. It should look like the best bespoke brand website, sophisticated, human, surprising, and realistically buildable.
+
+OUTPUT: one sharp fully designed desktop website section mockup, landscape 1600x1150. Warm ivory page, Sonar ink-teal type, restrained coral and sea-glass accents. Show quiet surrounding whitespace and a small current-site style "sonar." wordmark at the top left with Product / Niches / Pricing / Sign in at right. Keep this navigation understated.
+
+TOP SECTION HEADER: small eyebrow "BUILT FOR YOUR NEXT MOVE". A precisely typeset large bold contemporary grotesk headline, left aligned:
+"Different roles.
+Same unfair clarity."
+To its right, small supporting copy:
+"For the people turning
+market signals into action."
+This is proposed marketing copy, with no numerical or fabricated customer claims. Confident whitespace. Main heading about 64px at website scale, not enormous.
+
+MAIN IDEA: Three editorial columns flow across ONE continuous open ivory composition. They must NOT be three conventional rounded photo cards. NO photo rectangles with captions underneath. Instead, oversized typographic verbs, asymmetric photographic cutouts, and small useful copy form three distinct visual worlds. A thin vertical rule separates the text columns only near the bottom, not the photographic compositions. Small role eyebrow above each composition. Three columns are approximately equal overall widths but objects overlap invisible layout boundaries slightly and have different heights/angles.
+
+LEFT / BRAND MARKETERS:
+Role label "01 / BRAND MARKETERS".
+Large ink-teal display word "Lead." in heavy elegant grotesk, around 110px at website scale, integrated behind the artwork.
+Photographic subject: an elegant real adult female creative director, shown in a dynamic waist-up side profile, warm brown skin, short dark hair, wearing a beautifully tailored pale sea-glass jacket. She is actively holding a small real compact camera at CHEST HEIGHT and looking toward the right through the scene, not posing at the viewer. She is not gigantic; portrait head no more than 100px high on this full canvas. Her body cuts across the lower half of "Lead." with beautiful edge detail, not a rectangular photo. Behind her, a SINGLE large editorial contact strip of three actual portrait social-video stills, slightly rotated, showing women demonstrating skincare, exercise, and coffee. No fake app dashboard, numbers, charts or label clutter. A very restrained pale sage semicircle behind the scene can anchor the cutout, mostly hidden.
+Below: "Set the direction." in 26px ink-teal.
+Then "See the competitors, creators and content shaping your category."
+A subtle underlined "Explore your market ↗".
+
+CENTER / AGENCIES:
+Role label "02 / AGENCIES".
+Large ink-teal word "Prove." using same type treatment, situated a little lower than Lead.
+Photographic subject: two beautiful REAL female hands in an editorial gesture, one extending from the upper left, the other from the lower right, passing a very thin open silver tablet showing an elegant dark-teal research report with two photographic creator thumbnails and fine type. Tablet perfectly plausible, no giant grids or fake statistics. The hands have realistic medium skin tones and natural nails; only hands and wrists, not two full people. The exchange is an evocative real-world representation of evidence passed to a client. A thin coral fabric ribbon curls once behind the tablet and drops toward the lower edge, physically real and minimal; no decorative squiggles. Tablet and hands are a photographic cutout with subtle realistic shadow against ivory. The composition crosses in front of the lower part of "Prove." without obscuring readability.
+Below: "Make the case." in 26px.
+Then "Give every client a clear view, with source videos behind the story."
+Underlined "Bring the evidence ↗".
+
+RIGHT / FOUNDERS:
+Role label "03 / FOUNDERS".
+Large ink-teal word "Move." in the same beautifully kerned type, shifted slightly higher.
+Photographic subject: a young adult female founder with deep brown skin and natural tied-back curly hair, wearing a coral-red knit sleeveless top. THREE-QUARTER BODY at a modest scale, standing in a relaxed active stance, looking down attentively at a phone in her left hand while holding a small unbranded cream product package in her other hand. Real purposeful expression, no grin or business stock pose. Face tiny relative to the full section. Her silhouette is an exquisite photographic cutout crossing the type. Behind her is one oversized narrow vertical social-video still of a female creator holding the SAME cream product, angled slightly away like a tangible photo print, without paper texture. A restrained pale sea-glass elliptical shape grounds the composition.
+Below: "Find your opening." in 26px.
+Then "Understand the market before your next creator brief or launch."
+Underlined "See where to start ↗".
+
+VISUAL QUALITY:
+The cutouts must look like genuine high-end studio photography, exquisite natural skin, believable anatomy and precise material detail, not CGI/illustration or generic AI people. The three compositions are carefully orchestrated with intentional scale and overlap, not a messy scrapbook. Editorial tension between bold words and real human craft. Use approximately 45% negative space overall. Avoid identical silhouettes, identical photo sizes, monotonous alignment, boxes around every item, glow, floating UI windows, glassmorphism, stars, shiny gradients, holograms, radar rings, or giant smiling faces. NO men. NO offices, laptops, desks, clapperboards, magnifying glasses, newspaper or mood boards. Do not reuse the phone-and-lens scene from a different section.
+Bottom tiny note "Illustrative photography." The result is one complete compelling website section screenshot, not a moodboard, logo sheet or advertising poster. It must clearly show all three roles and their different jobs. Extraordinary typography and photo art direction, accurate readable words, not excessive visual noise.

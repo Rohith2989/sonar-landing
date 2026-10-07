@@ -4,3 +4,4 @@ node_modules
 *.log
 tmp/
 .qa/
+.DS_Store

@@ -1,0 +1,44 @@
+Tool: built-in ImageGen
+Purpose: Pricing-section concept with custom cutout artwork and planned layered animation. Preview only.
+
+Use case: ui-mockup.
+Create a stunning, distinctive PRICING SECTION for Sonar, a social listening product for modern brand marketers and agencies. This is a high-fidelity desktop web design concept image, approximately 1600x1250. This image must focus on the PRICING UI ITSELF, with bespoke photoreal transparent-PNG-style visual sculptures integrated into EACH plan. It should look like a crafted interactive creative-studio website, energetic and refined. No huge separate hero, no generic three empty pricing cards.
+
+Art direction: very clean warm ivory canvas, midnight ink teal bold Swiss grotesk typography, sea-glass green objects and a little vivid coral satin. Exquisitely lit real photographic cutouts with natural materials, delicate shadows, human creator imagery visible on physical photos. Integrate each sculpture into its plan so the art and typography overlap creatively but all pricing stays perfectly readable. Sculptures are isolated directly on the page, no backgrounds, panels, frames or enclosed backplates. No men, cartoon characters, plastic 3D people, generic SaaS illustration. Real photography of women ONLY WITHIN the tiny creator photos; no big floating portraits.
+
+COMPOSITION:
+At top a compact wordmark "sonar." at left and little uppercase "PRICING" at right. Beneath, left a very bold editorial headline "Small team." on line one, "Big perspective." on line two; keep this header compact, maximum 20% of total height. Right smaller support copy "Choose how much of the market you want to see." and two clearly legible small toggle rows: "One platform / TikTok + Instagram" with latter selected; "Monthly / Annual" with Monthly selected. Tiny caption "TikTok + Instagram · billed monthly".
+Below, THREE TALL OPEN PRICING COMPOSITIONS spanning the width, seamlessly connected by ONE slender winding coral ribbon traversing behind the three photographic objects. Make these compositions the core of the image, approximately 65% of total height. No traditional rounded cards, no enclosing borders, no repeated large boxes. Each column has its own unique artwork with different scale and orientation, grounded by crisply aligned typography. The center art is slightly taller and more dynamic, with a small coral asterisk near the label. Plenty of breathing room. A very light horizontal hairline under the artwork is allowed to align prices.
+
+PLAN ONE, LEFT:
+Small tracked label "01 / SOLO"
+Large bold title "Find your angle."
+Bespoke 3D-photographic PNG sculpture, roughly 270px square: a beautiful compact vintage-modern SEA-GLASS camera, tilted 15 degrees, hovering with a tiny shadow. Real machined metal details, textured grip, dark round glass lens. A narrow strip of 3 printed stills of female skincare and coffee creators curls elegantly out from behind the camera. A short coral shutter-release cable winds subtly toward the central artwork. The camera is real, tactile, high-end product photography, not cartoon.
+Below sculpture huge perfect type "$119" and smaller "/ month".
+"1 niche" and "TikTok + Instagram" on two neat lines.
+A dark teal pill CTA "Choose Solo ↗".
+Tiny understated footer microcopy "Your category, in focus."
+
+PLAN TWO, CENTER:
+Small tracked label "02 / TEAM" plus coral four-point asterisk
+Large bold title "See the whole story."
+Bespoke PNG sculpture roughly 300px square: FOUR clear-acrylic photographic contact sheets, fanned in a sophisticated turning helix above a low polished dark teal cylindrical hub; each sheet contains real female creator video stills from beauty, fitness, lifestyle and food. Use extremely precise physical contact-sheet material and restrained optical refraction, not floating generic UI cards. A coral satin ribbon threads through the negative space, gives beautiful looping movement. A small metal teal clip holds the center of the fan. Crisp luxury campaign photography. Visually implies the sheets can slowly rotate like a carousel, with every face always subtle and contained within the photos. One central photo is sharp, others angle away.
+Below sculpture huge perfect type "$349" and smaller "/ month".
+"4 niches" and "TikTok + Instagram".
+A coral CTA pill "Choose Team ↗" with dark ink teal type.
+Tiny footer "More perspectives. One clear picture."
+
+PLAN THREE, RIGHT:
+Small tracked label "03 / AGENCY"
+Large bold title "Make every brand move."
+Bespoke PNG sculpture roughly 300px square: an elegant open freestanding S-curve of flexible film/contact sheet with 12 small photographic video frames, curling around a polished teal spool. Realistic creator stills, mostly female beauty and wellness scenes and product close-ups. A small satin coral loop pierces gracefully through the film's loop and flows off right. Think precision editorial paper engineering photographed in a luxury product studio, spectacular silhouette but physically plausible, no surrounding card. Clearly different silhouette from camera and fanned sheets. It feels like it could unspool continuously in a calm loop.
+Below sculpture huge perfect type "$899" and smaller "/ month".
+"12 niches" and "TikTok + Instagram".
+A dark teal CTA pill "Choose Agency ↗".
+Tiny footer "A clearer view for every client."
+
+Bottom: one slim full-width dark teal strip, flush within page margins, only about 10% of page height. Left exact "Enterprise" then "40 niches. A wider field of view." Right "From $3,900 / month" and "Let's talk ↗". Tasteful tiny coral star only. No second big illustration.
+
+Animation-conscious design: all three photographed objects should have clearly separate visual components suitable for transparent PNG layers: camera lens/shutter, rotating contact sheets, flowing film/ribbon. This preview is a single exquisitely clean frozen frame of that planned animation. Do NOT put arrows, motion blur, ghosts, duplicate objects, storyboard annotations or animation instructions onto the design.
+Typography excellent, all exact prices legible and aligned. Keep artwork independent of the prices and clear of CTAs. Actual monthly prices and niche counts must be exactly as supplied. No invented testimonials, performance metrics, feature lists, free-trial claims or most-popular claims.
+The result must feel bespoke, magnetic and premium, with visually rich small objects people would want to interact with, and serious usability. Borderless editorial layout, not a generic SaaS pricing template, not a hero followed by tiny pricing. Make the pricing section itself the centerpiece.

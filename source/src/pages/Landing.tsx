@@ -18,6 +18,12 @@ import { Turnstile, isTurnstileEnabled, type TurnstileHandle } from "@/component
 import { PublicPage } from "./Niches";
 import { DIRECTORY, fmt, niceDate } from "@/lib/niche-directory";
 import { ActiveMarkets } from "@/components/ActiveMarkets";
+import "../../ask-motion/ask-motion.css";
+import "../../ask-motion/feed-motion.css";
+import "../../people-scene/people-scene.css";
+import "../../ask-motion/ask-motion.mjs";
+import "../../page-polish/page-polish.css";
+import "../../page-polish/page-polish.mjs";
 
 type Vars = CSSProperties & Record<`--${string}`, string | number>;
 
@@ -363,39 +369,26 @@ const CAPABILITIES: Array<{ icon: "ground" | "cite" | "link"; lead: string; rest
   { icon: "link", lead: "Every video linked", rest: "one click from the answer to the source." },
 ];
 
-/** Rings, a sweep and the blips it catches. Pure decoration; the sweep is one rotating layer. */
-function Radar() {
-  const blips: Array<[number, number, number]> = [[64, 30, 0.9], [78, 58, 1.7], [40, 70, 3.1], [30, 38, 4.4], [58, 82, 2.4]];
-  return (
-    <div className="lp-radar" aria-hidden="true">
-      <svg viewBox="0 0 100 100">
-        {[48, 38, 28, 18, 8].map((r) => (
-          <circle key={r} cx="50" cy="50" r={r} fill="none" stroke="rgba(228,246,192,.13)" strokeWidth=".18" />
-        ))}
-        <path d="M50 2v96M2 50h96" stroke="rgba(228,246,192,.08)" strokeWidth=".15" />
-      </svg>
-      <div className="lp-sweep" />
-      {blips.map(([x, y, t], i) => (
-        // the sweep turns once per 6s from 12 o'clock; each blip lights as it passes its angle
-        <span key={i} className="lp-blip" style={{ left: `${x}%`, top: `${y}%`, "--t": `${t - 6}s` } as Vars} />
-      ))}
-    </div>
-  );
-}
-
 function Spotlight({ onIndexTotal }: { onIndexTotal: (total: number) => void }) {
   return (
-    <section id="how" className="lp-deep scroll-mt-24">
-      <Radar />
+    <section id="how" className="lp-deep lp-ask lp-feed scroll-mt-24" data-ask-design="feed">
+      <div className="lp-ask-scene" aria-hidden="true">
+        <img className="lp-feed-clouds" src="/landing/ask-motion/cloud-background.webp" width="1672" height="941" loading="lazy" alt="" />
+        <div className="lp-ask-frame">
+          <img className="lp-ask-poster" src="/landing/ask-motion/closer-feed-rest.webp" width={1920} height={1080} loading="lazy" decoding="async" alt="" />
+          <div className="lp-ask-layers">
+            <img className="lp-ask-portrait-rest" src="/landing/ask-motion/closer-feed-rest.webp" width="1920" height="1080" loading="lazy" alt="" />
+            <video className="lp-ask-film" width="1920" height="1080" muted playsInline loop preload="none" aria-hidden="true" tabIndex={-1} />
+          </div>
+        </div>
+      </div>
       <div className="lp-deep-inner">
         <div>
-          <span className="lp-eyebrow" style={{ color: "rgba(228,246,192,.8)" }}>How it works</span>
-          <h2 className="lp-display mt-6" data-lp="words">
-            <Words text="Ask about your market." /> <em><Words text="Read the receipts." offset={4} /></em>
-          </h2>
-          <p className="mt-6 max-w-[44ch] text-[16px] leading-relaxed text-[color:rgba(232,242,239,.72)]">
-            Sonar's agent answers from the index it has already built for your niche.
-          </p>
+          <header className="lp-ask-copy">
+            <span className="lp-ask-eyebrow"><span />Ask Sonar</span>
+            <h2>Go beyond<br />the <em>scroll.</em></h2>
+            <p>Ask about your market.<br />See the videos behind the answer.</p>
+          </header>
           <ul className="mt-10">
             {CAPABILITIES.map((c, i) => (
               <li key={c.lead} className="lp-cap-row" data-lp="read">
@@ -626,65 +619,65 @@ function Pillars() {
 /* ── 5. personas — capability statements only, never invented outcomes ─────
    The photographs are illustrative (generated), not customers, and say so. */
 
-const PERSONAS: Array<{ key: string; name: string; lead: string; points: string[] }> = [
+const PERSONAS = [
   {
-    key: "brand",
-    name: "Brand marketers",
-    lead: "You own the channel plan. Sonar shows you the field.",
-    points: [
-      "See which competitors run creator programs — and which creators carry them.",
-      "Answer \"what changed this month\" with cited clips instead of screenshots.",
-      "Turn what already works in your niche into a brief your team can shoot.",
-    ],
+    "key": "lead",
+    "audience": "Brand marketers",
+    "word": "Lead.",
+    "title": "Set the direction.",
+    "description": "See the competitors, creators and content shaping your category.",
+    "action": "Explore your market",
+    "href": "#how"
   },
   {
-    key: "agency",
-    name: "Agencies",
-    lead: "Several brands at once, one scoped index each.",
-    points: [
-      "Every client niche is its own index — switch between them without starting over.",
-      "Reports are shareable links, so the client reads the same numbers you do.",
-      "Find creators already posting in a client's category, with their track record attached.",
-    ],
+    "key": "prove",
+    "audience": "Agencies",
+    "word": "Prove.",
+    "title": "Make the case.",
+    "description": "Give every client a clear view, with source videos behind the story.",
+    "action": "Bring the evidence",
+    "href": "#free-report"
   },
   {
-    key: "founder",
-    name: "Founders",
-    lead: "Marketing is one of your nine jobs. This one arrives mapped.",
-    points: [
-      "Start from your brand name — Sonar works out the niche and maps it.",
-      "See who actually drives your market's conversation before you spend on creators.",
-      "The free report shows the shape of your market before you commit to anything.",
-    ],
-  },
+    "key": "move",
+    "audience": "Founders",
+    "word": "Move.",
+    "title": "Find your opening.",
+    "description": "Understand the market before your next creator brief or launch.",
+    "action": "See where to start",
+    "href": "#free-report"
+  }
 ];
 
 function Personas() {
   return (
-    <section className="lp-people">
-      <div className="lp-head" data-lp="rise">
-        <span className="lp-eyebrow">Who it's for</span>
-        <h2 className="lp-display mt-6" data-lp="words"><Words text="Built around the person doing the work" /></h2>
-        <p>Different desks, same question: what is actually moving in my market, and who is driving it.</p>
+    <section id="people" className="lp-people lp-role-scene" aria-labelledby="people-heading">
+      <div className="lp-role-inner">
+        <header className="lp-role-header">
+          <div>
+            <span className="lp-role-eyebrow">Built for your next move</span>
+            <h2 id="people-heading">Different roles.<br />Same unfair clarity.</h2>
+          </div>
+          <p>For the people turning<br />market signals into action.</p>
+        </header>
+        <div className="lp-role-grid">
+          {PERSONAS.map((p, i) => (
+            <article key={p.key} className="lp-role" data-role={p.key} aria-labelledby={`people-${p.key}`}>
+              <span className="lp-role-label">0{i + 1} / {p.audience}</span>
+              <h3 id={`people-${p.key}`}>{p.word}</h3>
+              <div className="lp-role-art" aria-hidden="true">
+                <img src={`/landing/people-scene/${p.key}.webp`} width={1200} height={1020} loading="lazy" decoding="async" alt="" />
+              </div>
+              <div className="lp-role-copy">
+                <h4>{p.title}</h4>
+                <p>{p.description}</p>
+                <a href={p.href} aria-label={`${p.action} — ${p.audience}`}>{p.action}<span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+          ))}
+        </div>
+        <p className="lp-role-note">Illustrative photography.</p>
       </div>
-      <div className="lp-people-grid">
-        {PERSONAS.map((p, i) => (
-          <article key={p.key} className="lp-person" tabIndex={0} aria-label={p.name}>
-            <div className="lp-photo" data-lp="open" style={{ "--r": i * 4 } as Vars}>
-              <img src={`/landing/persona-${p.key}-bw.webp`} alt="" loading="lazy" decoding="async" width={960} height={1192} />
-              <img className="colour" src={`/landing/persona-${p.key}.webp`} alt="" loading="lazy" decoding="async" width={960} height={1192} />
-              <span className="lp-photo-tag"><b>0{i + 1}</b>{p.name}</span>
-              <div className="lp-photo-lead"><p>{p.lead}</p></div>
-            </div>
-            <ul data-lp="rise" style={{ "--r": i * 4 } as Vars}>
-              {p.points.map((pt) => (
-                <li key={pt}><Check /><span>{pt}</span></li>
-              ))}
-            </ul>
-          </article>
-        ))}
-      </div>
-      <p className="lp-note">Photography is illustrative.</p>
     </section>
   );
 }
@@ -904,7 +897,7 @@ function FreeReport() {
 /* ── page ───────────────────────────────────────────────────────────────── */
 
 function Pricing() {
-  return <div className="lp-pricing lp-grain"><PublicPricing lazy /></div>;
+  return <div className="sp-pricing-host"><PublicPricing lazy /></div>;
 }
 
 export function Landing(): ReactNode {
