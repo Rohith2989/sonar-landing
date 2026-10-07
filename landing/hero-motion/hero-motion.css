@@ -1,0 +1,37 @@
+/* First-section animation only. Existing scroll/parallax wrappers retain their transforms. */
+.lp-stage .lp-figure .lp-actor { animation: none !important; }
+.lp-stage[data-pointer] .lp-figure { translate: none !important; }
+.lp-stop-motion { position: absolute; inset: 0; display: none; width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
+.lp-motion-ready > .lp-stop-motion { display: block; }
+.lp-motion-ready > .lp-actor-rest { opacity: 0; }
+.lp-hand-l .lp-stop-motion { transform-origin: 4% 24%; }
+.lp-hand-r .lp-stop-motion { transform-origin: 95% 25%; }
+.lp-shutter-flash {
+  position: absolute; left: 84%; top: 68%; width: 42%; aspect-ratio: 1;
+  opacity: 0; pointer-events: none; z-index: 2;
+  background: radial-gradient(circle, #fff 0 5%, #fff7d9ed 8%, #ffe5ad88 21%, #fff3d000 67%);
+  transform: translate(-50%,-50%) scale(.5);
+}
+.lp-shutter-flash::before,.lp-shutter-flash::after {
+  content: ''; position: absolute; inset: 45% 2%; border-radius: 50%;
+  background: linear-gradient(90deg, transparent, #fff9e9, transparent); transform: rotate(-18deg);
+}
+.lp-shutter-flash::after { transform: rotate(72deg); }
+.lp-motion-control {
+  position: absolute; z-index: 7; right: clamp(20px,4.5vw,90px); top: 100px;
+  border: 1px solid rgba(23,44,48,.15); border-radius: 999px;
+  padding: 9px 13px; font-family: inherit; font-size: 11px; font-weight: 500; line-height: 1.2;
+  color: #234348; background: #f6fbf9e8; cursor: pointer;
+}
+.lp-motion-control::before { content: 'Ⅱ'; display: inline-block; margin-right: 7px; font-size: 11px; }
+.lp-stage[data-motion-state='paused'] .lp-motion-control::before { content: '▷'; }
+.lp-motion-control:hover { background: #fff; }
+.lp-motion-control:focus-visible { outline: 2px solid #175e63; outline-offset: 4px; }
+.lp-motion-control[hidden] { display: none; }
+@media(max-width:899px) {
+  .lp-motion-control { position: relative; align-self: center; order: 5; right: auto; top: auto; margin: -10px 0 22px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .lp-stage .lp-stop-motion,.lp-stage .lp-shutter-flash,.lp-motion-control { display: none !important; }
+  .lp-stage .lp-actor-rest { opacity: 1 !important; }
+}

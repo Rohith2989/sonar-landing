@@ -1,0 +1,154 @@
+{
+  "referencePose": 0,
+  "description": "Measured lower-torso registration: match pose 0 width, anchor the waist to the cell center and the crown to a common top margin. Crops remove neighboring-row hems, not subject pixels.",
+  "sourceWidth": 561,
+  "sourceHeight": 701,
+  "padding": 16,
+  "waistWidth": 288,
+  "frames": [
+    {
+      "pose": 0,
+      "waistCenter": 294,
+      "waistWidth": 288,
+      "trimTop": 0
+    },
+    {
+      "pose": 1,
+      "waistCenter": 311.5,
+      "waistWidth": 299,
+      "trimTop": 0
+    },
+    {
+      "pose": 2,
+      "waistCenter": 300.5,
+      "waistWidth": 303,
+      "trimTop": 2
+    },
+    {
+      "pose": 3,
+      "waistCenter": 301.5,
+      "waistWidth": 309,
+      "trimTop": 2
+    },
+    {
+      "pose": 4,
+      "waistCenter": 299.5,
+      "waistWidth": 293,
+      "trimTop": 0
+    },
+    {
+      "pose": 5,
+      "waistCenter": 302.5,
+      "waistWidth": 305,
+      "trimTop": 0
+    },
+    {
+      "pose": 6,
+      "waistCenter": 298,
+      "waistWidth": 300,
+      "trimTop": 1
+    },
+    {
+      "pose": 7,
+      "waistCenter": 292,
+      "waistWidth": 308,
+      "trimTop": 1
+    },
+    {
+      "pose": 8,
+      "waistCenter": 295,
+      "waistWidth": 296,
+      "trimTop": 0
+    },
+    {
+      "pose": 9,
+      "waistCenter": 279.5,
+      "waistWidth": 299,
+      "trimTop": 0
+    },
+    {
+      "pose": 10,
+      "waistCenter": 296,
+      "waistWidth": 302,
+      "trimTop": 0
+    },
+    {
+      "pose": 11,
+      "waistCenter": 277.5,
+      "waistWidth": 305,
+      "trimTop": 0
+    },
+    {
+      "pose": 12,
+      "waistCenter": 304.5,
+      "waistWidth": 321,
+      "trimTop": 0
+    },
+    {
+      "pose": 13,
+      "waistCenter": 280,
+      "waistWidth": 314,
+      "trimTop": 0
+    },
+    {
+      "pose": 14,
+      "waistCenter": 305.5,
+      "waistWidth": 315,
+      "trimTop": 0
+    },
+    {
+      "pose": 15,
+      "waistCenter": 271,
+      "waistWidth": 318,
+      "trimTop": 0
+    },
+    {
+      "pose": 16,
+      "waistCenter": 299,
+      "waistWidth": 314,
+      "trimTop": 0
+    },
+    {
+      "pose": 17,
+      "waistCenter": 272.5,
+      "waistWidth": 321,
+      "trimTop": 0
+    },
+    {
+      "pose": 18,
+      "waistCenter": 299,
+      "waistWidth": 316,
+      "trimTop": 0
+    },
+    {
+      "pose": 19,
+      "waistCenter": 271.5,
+      "waistWidth": 321,
+      "trimTop": 0
+    },
+    {
+      "pose": 20,
+      "waistCenter": 295.5,
+      "waistWidth": 321,
+      "trimTop": 0
+    },
+    {
+      "pose": 21,
+      "waistCenter": 282,
+      "waistWidth": 316,
+      "trimTop": 0
+    },
+    {
+      "pose": 22,
+      "waistCenter": 305,
+      "waistWidth": 304,
+      "trimTop": 1
+    },
+    {
+      "pose": 23,
+      "waistCenter": 283,
+      "waistWidth": 296,
+      "trimTop": 1
+    }
+  ]
+}

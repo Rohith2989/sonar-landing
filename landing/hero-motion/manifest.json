@@ -1,0 +1,38 @@
+{
+  "version": 6,
+  "generation": "Static approved v4 portrait; camera and headphones retain their original animation",
+  "actors": {
+    "figure": {
+      "sources": [
+        "/landing/hero-motion/figure-poster.webp"
+      ],
+      "sourceImages": [
+        "source/hero-motion/assets/figure-v4/frame-08.png"
+      ],
+      "static": true,
+      "cols": 1,
+      "rows": 1,
+      "width": 800,
+      "height": 1036,
+      "padding": 16,
+      "framesPerSheet": 1,
+      "count": 1
+    },
+    "camera": {
+      "src": "/landing/hero-motion/camera-atlas.webp",
+      "cols": 3,
+      "rows": 2,
+      "width": 640,
+      "height": 504,
+      "count": 6
+    },
+    "headphones": {
+      "src": "/landing/hero-motion/headphones-atlas.webp",
+      "cols": 3,
+      "rows": 2,
+      "width": 640,
+      "height": 410,
+      "count": 6
+    }
+  }
+}
