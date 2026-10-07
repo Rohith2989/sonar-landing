@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "build": "node scripts/build-static.mjs",
+    "build:ask": "node scripts/build-ask-poses.mjs",
     "build:hero": "node scripts/build-hero.mjs",
     "test": "node --test tests/*.test.mjs"
   },

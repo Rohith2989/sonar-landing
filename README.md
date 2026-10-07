@@ -17,7 +17,7 @@ The redesigned public landing page for 8X Sonar, the social-listening index of T
 
 1. **Hero** — a pinned stage of depth layers over a living painted sky: sonar rings, a two-tone headline, the woman holding *The Sonar Report*, hands with a camera and headphones reaching in from the edges. Scrolling parts the layers while the dashboard rises over them in a browser window.
 2. **The index** — real index numbers only (dated, aggregate), and the niche directory drifting past.
-3. **Ask Sonar** — a photographic campaign director over a sea-glass sky, with subtle facial movement and drifting clouds behind the existing live index lookup.
+3. **Ask Sonar** — a photographic campaign director over a sea-glass sky, with twelve complete portrait poses and drifting clouds behind the existing live index lookup.
 4. **One index, four ways in** — S-01 to S-04 sheets that stack as you scroll.
 5. **Built around the person doing the work** — photo cards that bloom from black and white into colour.
 6. **Pricing**, then the free-report close over a second painted sky.
@@ -72,33 +72,47 @@ both static entry points. The matching CSS fallback also lives in
 
 ## Ask Sonar scene
 
-The approved artwork is in `source/ask-motion/assets/scene.png`. It was refined
-with the built-in image generation tool using `source/ask-motion/image-prompt.txt`.
-The eight-second 1080p master, `scene-veo.mp4`, was generated with the quality
-`veo-3.1-generate-preview` model using the same first and last image and the prompt
-in `source/ask-motion/video-prompt.txt`. The generated scene is illustrative.
+The campaign director uses twelve complete transparent portrait poses: hair,
+glasses, face, neck and body move together. A static phone and magnifying glass
+sit above her, with a separate sea-glass cloud background drifting over 38 seconds.
+There is no inner-face video mask. The portrait uses an eight-second stepped clock,
+with longer reading/smile holds and the same resting pose on both sides of the loop.
 
-The shipped silent H.264 loop is `landing/ask-motion/scene-loop.mp4`, with a
-182KB WebP poster. An SVG mask confines the live video to the face and distant
-clouds; the paper, other faces, phone, hands and magnifying glass remain the
-approved still. The lookup is the original React form, with its existing API
-contract, validation and unavailable state. No API keys ship to the browser.
+The approved composition is `source/ask-motion/assets/scene.png`. Built-in image
+generation produced three separate assets from it: `portrait-green.png`,
+`cloud-background.png` and `foreground-props.png`. Their exact prompts are saved
+in `source/ask-motion/*-image-prompt.txt`. The portrait animation master is
+`portrait-green-veo.mp4`, generated at 1080p using the quality
+`veo-3.1-generate-preview` model with matching first/last images and
+`portrait-motion-prompt.txt`. The earlier `scene-veo.mp4` remains as generation
+history; it is not loaded by the page. All photography is illustrative.
 
-The section loads video only when it enters the viewport and pauses when it
-leaves the viewport or the document is hidden. The visible motion control pauses
-both facial and cloud motion. Reduced motion uses the still poster without a
-video request. A failed video also keeps the poster. `?ask-time=3#how` provides a
-paused frame for visual review. The mobile layout places the headline above a
-closer portrait crop.
+`npm run build:ask` selects the twelve source times in `portrait-timeline.mjs`,
+removes chroma green with FFmpeg, and writes two transparent WebP atlases
+(1.36 MB together), plus a matching resting portrait and manifest. This requires
+Python's `imageio-ffmpeg` package and the existing Sharp dependency. Then run
+`npm run build` to copy the controller, timeline and CSS, and update both static
+entry points. `source/src/pages/Landing.tsx` has the matching layout for upstream.
+The live lookup's React nodes, validation and API contract are preserved.
 
-`npm run build` copies the module/CSS/mask and includes the artwork and heading
-in both prerendered entry points. Its observer also enhances the live tree
-created by the existing bundle. The React source contains the matching layout
-and imports for an eventual upstream build; this static repo still cannot
-compile the full app. The module adds its own decorative nodes without moving
-or replacing React's form or result nodes.
+Atlases load only when the scene enters the viewport. The clock stops off screen
+and in hidden tabs. The motion control pauses both portrait and clouds. Reduced
+motion loads the still layers without requesting atlases; failed media retains
+a complete still. `?ask-time=3#how` pauses the scene at a specific time for review.
+The mobile layout places the headline above a closer portrait crop.
 
-To re-encode the approved video, run `python3 scripts/build-ask-media.py`
-(requires `imageio-ffmpeg`). Regeneration is an explicit separate action:
-`python3 scripts/generate-ask-video.py` requires `google-genai` and reads
-`GEMINI_API_KEY` from the environment or a hidden prompt, never from source.
+Tests check loop boundaries, whole-hair silhouette changes, alpha transparency,
+media size, shipped-source parity, and playback lifecycle/failure behavior.
+Actual before/after browser recordings are saved locally under `.qa/` (gitignored).
+
+Regeneration is explicit and separate from the build:
+
+```sh
+python3 scripts/generate-ask-video.py \
+  --input source/ask-motion/assets/portrait-green.png \
+  --prompt source/ask-motion/portrait-motion-prompt.txt \
+  --output source/ask-motion/assets/portrait-green-veo.mp4
+```
+
+The script requires `google-genai` and reads `GEMINI_API_KEY` from the environment
+or a hidden prompt. It never saves the key, and no API credentials ship to the browser.

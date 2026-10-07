@@ -9,7 +9,7 @@ for(const name of ['marquee-speed.mjs','marquee-speed.css'])await copyFile(`sour
 const marqueeMarker='<!-- sonar-marquee-speed -->';
 const marqueeAssets=`${marqueeMarker}\n    <link rel="stylesheet" href="/landing/marquee-speed.css">\n    <script type="module" src="/landing/marquee-speed.mjs"></script>`;
 await mkdir('landing/ask-motion',{recursive:true});
-for(const name of ['ask-motion.mjs','ask-markup.mjs','ask-motion.css','motion-mask.svg'])await copyFile(`source/ask-motion/${name}`,`landing/ask-motion/${name}`);
+for(const name of ['ask-motion.mjs','ask-markup.mjs','ask-motion.css','portrait-timeline.mjs'])await copyFile(`source/ask-motion/${name}`,`landing/ask-motion/${name}`);
 const askMarker='<!-- sonar-ask-motion -->';
 const askAssets=`${askMarker}\n    <link rel="stylesheet" href="/landing/ask-motion/ask-motion.css">\n    <script type="module" src="/landing/ask-motion/ask-motion.mjs"></script>`;
 for(const file of ['index.html','prerendered/index.html']) {
@@ -17,7 +17,9 @@ for(const file of ['index.html','prerendered/index.html']) {
   if(!html.includes(marker))html=html.replace('</head>',`${script}\n  </head>`);
   if(!html.includes(marqueeMarker))html=html.replace('</head>',`${marqueeAssets}\n  </head>`);
   if(!html.includes(askMarker))html=html.replace('</head>',`${askAssets}\n  </head>`);
-  if(!html.includes('class="lp-ask-scene"')) {
+  if(html.includes('class="lp-ask-scene"')) {
+    html=html.replace(/<div class="lp-ask-scene" aria-hidden="true">[\s\S]*?\n<\/div>/,sceneMarkup);
+  } else {
     html=html.replace('<section id="how" class="lp-deep scroll-mt-24">',`<section id="how" class="lp-deep lp-ask scroll-mt-24">${sceneMarkup}${controlMarkup}`);
     html=html.replace('<div class="lp-deep-inner"><div>',`<div class="lp-deep-inner"><div>${copyMarkup}`);
   }
@@ -28,5 +30,5 @@ const manifest = JSON.parse(await readFile(`${out}/manifest.json`,'utf8'));
 for(const actor of Object.values(manifest.actors)) {
   for(const source of actor.sources ?? [actor.src])await readFile(`.${source}`);
 }
-for(const file of ['scene-poster.webp','scene-loop.mp4'])await readFile(`landing/ask-motion/${file}`);
+for(const file of ['scene-poster.webp','cloud-background.webp','foreground-props.webp','portrait-rest.webp','portrait-atlas-0.webp','portrait-atlas-1.webp','portrait-manifest.json'])await readFile(`landing/ask-motion/${file}`);
 console.log('Hero, Ask Sonar and marquee modules built; both static landing entry points wired.');
