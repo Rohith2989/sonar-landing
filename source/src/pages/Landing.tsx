@@ -895,7 +895,7 @@ function FreeReport() {
 /* ── page ───────────────────────────────────────────────────────────────── */
 
 function Pricing() {
-  return <div className="lp-pricing lp-grain"><PublicPricing lazy /></div>;
+  return <div className="sp-pricing-host"><PublicPricing lazy /></div>;
 }
 
 export function Landing(): ReactNode {

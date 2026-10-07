@@ -1,6 +1,7 @@
 import {copyFile,readFile,writeFile,mkdir} from 'node:fs/promises';
 import {sceneMarkup,copyMarkup,controlMarkup} from '../source/ask-motion/feed-markup.mjs';
 import {peopleMarkup} from '../source/people-scene/people-content.mjs';
+import {pricingMarkup,validateCatalogue} from '../source/pricing-scene/pricing-content.mjs';
 const out='landing/hero-motion';
 await mkdir(out,{recursive:true});
 for(const name of ['hero-motion.mjs','hero-motion.css','timeline.mjs'])await copyFile(`source/hero-motion/${name}`,`${out}/${name}`);
@@ -44,4 +45,19 @@ for(const actor of Object.values(manifest.actors)) {
 }
 for(const file of ['scene-poster.webp','cloud-background.webp','foreground-props.webp','portrait-rest.webp','portrait-atlas-0.webp','portrait-atlas-1.webp','portrait-manifest.json','portrait-fluid.webm','portrait-fluid-hevc.mov','portrait-fluid-rest.webp','video-manifest.json','closer-feed.webm','closer-feed-hevc.mov','closer-feed-rest.webp','closer-feed-manifest.json'])await readFile(`landing/ask-motion/${file}`);
 for(const name of ['lead','prove','move'])await readFile(`landing/people-scene/${name}.webp`);
-console.log('Hero, Ask Sonar, people and marquee modules built; both static landing entry points wired.');
+const catalogue=validateCatalogue(JSON.parse(await readFile('preview-data/pricing.json','utf8')));
+await mkdir('landing/pricing-scene',{recursive:true});
+for(const name of ['pricing-content.mjs','pricing-controller.mjs','pricing-scene.mjs','pricing-scene.css'])await copyFile(`source/pricing-scene/${name}`,`landing/pricing-scene/${name}`);
+for(const name of ['solo','team','agency'])await readFile(`landing/pricing-scene/${name}.webp`);
+const pricingMarker='<!-- sonar-pricing-scene -->';
+const pricingAssets=`${pricingMarker}\n    <link rel="stylesheet" href="/landing/pricing-scene/pricing-scene.css">\n    <script type="module" src="/landing/pricing-scene/pricing-scene.mjs"></script>`;
+for(const file of ['index.html','prerendered/index.html','prerendered/pricing.html']) {
+  let html=await readFile(file,'utf8');
+  if(!html.includes(pricingMarker))html=html.replace('</head>',`${pricingAssets}\n  </head>`);
+  const section=/<section\b[^>]*id="pricing"[^>]*>[\s\S]*?<\/section>/;
+  if(!section.test(html))throw new Error(`Missing pricing section in ${file}`);
+  html=html.replace(section,pricingMarkup(catalogue,{page:file==='prerendered/pricing.html'}));
+  html=html.replace('<div class="lp-pricing lp-grain">','<div class="sp-pricing-host">');
+  await writeFile(file,html);
+}
+console.log('Hero, Ask Sonar, people, pricing and marquee built; landing and pricing entry points wired.');

@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "build": "node scripts/build-static.mjs",
+    "build:pricing": "node scripts/build-pricing-assets.mjs",
     "build:people": "node scripts/build-people-assets.mjs",
     "build:ask-video": "python3 scripts/build-ask-video.py",
     "build:ask": "node scripts/build-ask-poses.mjs",

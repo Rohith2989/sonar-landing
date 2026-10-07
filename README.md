@@ -148,3 +148,37 @@ original section and hides the original only after successful insertion. React's
 nodes remain intact, and removed routes release their inserted scenes. No forms,
 API contracts or other sections are replaced. Desktop and mobile screenshots are
 saved locally under `.qa/people-scene/`; use `/#people` to review the section.
+
+## Pricing
+
+The compact pricing design is shared by `/#pricing` and `/pricing`. The three
+cards use real text and controls, with small transparent camera, creator-sheet
+and filmstrip cutouts made with built-in ImageGen. Source PNGs and the exact
+prompts are in `source/pricing-scene/`; the approved visual is
+`source/pricing-concepts/refined-pricing-v4.png`. `npm run build:pricing` trims and
+optimizes the assets to three alpha WebPs (about 147 KB combined). Run it only
+when artwork changes, followed by `npm run build`.
+
+`pricing-content.mjs` owns shared markup, catalogue validation and price/CTA
+selection. `pricing-controller.mjs` fetches `/api/public/pricing`, updates both
+toggles, refreshes visible prices and cleans up requests/listeners on unmount.
+Annual prices are the complete yearly charge, explicitly labelled `/ year`.
+Unavailable plans lead to the existing contact page; available self-serve plans
+lead to signup. Enterprise retains custom-scope pricing, and the original add-ons
+are available in the “Add a little more” disclosure. A failed catalogue request
+shows an honest unavailable state with retry, never stale checkout pricing.
+
+The static build includes the monthly catalogue for no-JavaScript readers.
+After the old compiled React bundle hydrates, `pricing-scene.mjs` inserts the new
+section beside its original and hides only that original. The upstream reference
+`source/src/components/PublicPricing.tsx` mounts the same controller. The repository
+still does not contain the complete upstream React build, so that reference is
+not compiled here.
+
+Hover/focus gently tilts each cutout and catches light on the camera lens. Motion
+is brief and interaction-triggered, with no continuous animation loop; reduced
+motion disables it. Small screens stack the cards. Tests cover every plan/billing
+combination, API validation, unavailable-plan destinations, safe rendering and
+static/deployed parity. Browser checks include desktop, 820/390/320px layouts,
+all toggles, contact navigation and API-failure recovery. Screenshots and asset
+checks are saved locally under `.qa/pricing-scene/`.

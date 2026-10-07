@@ -1,0 +1,47 @@
+Tool: built-in ImageGen
+Reference: source/pricing-concepts/compact-pricing-v3.png
+Purpose: Typography, spacing and visual-hierarchy refinement. Preview only.
+
+Use case: ui-mockup / precise-object-edit.
+Refine the attached Sonar pricing-page mockup. The user LIKES this direction and wants professional FINESSE, especially font sizing, optical balance, spacing and visual hierarchy. Preserve the three compact boxed cards and the exact custom camera / creator-contact-sheet fan / filmstrip PNG artwork. Do not invent a new concept. Deliver one polished desktop website screenshot, approximately 1600 x 1120. No browser chrome or annotations.
+
+The existing mockup's weaknesses to fix: every line is oversized and heavy, the benefit headlines fight the prices, the huge black checkmark circles are clumsy, the art area wastes vertical space, the cards are too close to viewport edges, and type lacks subtle hierarchy. Make this next version feel carefully crafted and effortless.
+
+ART DIRECTION: warm ivory #FAFAF6 canvas, white cards, near-black teal #092E33 ink, desaturated sea-glass #F0F7F3 for the central card, restrained coral #FF826F highlight. Flat crisp website design, absolutely no distressed text, faux paper texture, cinematic depth-of-field, background gradients or rendered shadows on typography. A little realistic shadow ONLY beneath the small cutout objects. Keep their beautiful lifelike creator photography and camera materials. Crisp and clear, never AI-fuzzy.
+
+GRID: page max-width approximately 1160px within 1600px canvas, meaning substantial 180-220px side margins. Three perfectly aligned equal-width cards, 24px gutters, each around 370px wide and 450-490px high. 18px card radii, 1px soft warm-gray borders. Almost imperceptible depth. Cards must be modest sized, all content comfortably inside, no giant decorative artwork. Middle card's very pale sea-glass tint and fine muted-teal border subtly focus it. No huge banner above cards.
+
+NAVIGATION: low-profile horizontal navigation, 76px tall, aligned with content grid. sonar. wordmark about 29px at left with coral period. Product / Niches / Pricing at 14px, Pricing has a delicate underline. Right small "Get a free report ↗" deep teal pill. Ample whitespace.
+
+HEADER:
+Small tracked mono eyebrow "PLANS FOR YOUR NEXT MOVE" around 10px, generous tracking.
+Centered headline exactly "Small team. Big perspective." at around 50-54px, semibold/bold, tight but optically good tracking -1.5px, not ultrablack. One line with comfortable margins. Beautiful contemporary grotesk such as Archivo/Neue Haas.
+Subtitle centered "Choose how much of the market you want to see." about 16px regular, muted teal, plenty of separation.
+20px below, one compact centered control row. Use visually grouped small pill segmented controls: "One platform" and selected "TikTok + Instagram"; gentle separator; selected "Monthly" and "Annual". Text 12-13px, 36px tall. Selected dark teal, unselected ivory-gray. Tiny coral asterisk beside Annual and subtle small text "1 month on us". No additional toggle options.
+32px space before cards.
+
+PRICING CARDS — tighten and improve the whole layout:
+Within each card 28px inset padding. Top quarter is a small clean two-column header: plan NAME left, custom photographic object right. Plan names are title case "Solo", "Team", "Agency", 26px semibold, NOT tiny letterspaced uppercase and NOT huge. A tiny tracked 01 / 02 / 03 above the names adds refined editorial detail. Under each plan name a small 14px REGULAR benefit phrase, allowed to wrap neatly into two lines within the left half:
+Solo "Find your angle."
+Team "See the whole story."
+Agency "Make every brand move."
+These benefit phrases must NOT be large bold headlines. On the right of each header, small exquisite version of the EXACT reference sculpture, approximately 112px wide and 105px tall: camera with miniature contact sheet for Solo, photographic fan for Team, curling filmstrip with spool for Agency. Objects fit entirely inside card. Maintain small coral accents in them, no connecting ribbon across cards. Their silhouettes must be balanced in visual weight; not so large they dominate.
+On Team only, a small four-point CORAL star at top next to the name. No unsupported most popular tag.
+Below this compact header, generous 22px breathing room then PRIMARY PRICE line, visually dominant within the card:
+Solo "$119"; Team "$349"; Agency "$899", around 56-60px semibold with tabular evenly aligned numerals and restrained negative tracking. Dollar sign about half-size, slightly raised, integrated elegantly. Small "/ month" in 14px muted ink aligned near number baseline. The price rows are precisely aligned across cards.
+Small "Billed monthly" at 12px directly below prices with 8px spacing.
+Next 22px then fine pale divider. Feature list of two simple 15px rows with tiny delicate teal checkmarks, NO filled circular check badges:
+Solo "1 niche" and "TikTok + Instagram".
+Team "4 niches" and "TikTok + Instagram".
+Agency "12 niches" and "TikTok + Instagram".
+Comfortable 24-28px line spacing. Bold only niche count slightly, rest regular.
+Muted supportive copy at 12-13px:
+Solo "Your category, in focus."
+Team "More perspectives. One clear picture."
+Agency "A clearer view for every client."
+Keep supporting lines readable with enough width, wrap to two lines if needed with equal allocated height across cards.
+At bottom full-width CTA buttons exactly 44px high, 12px corner radius, ample 28px inset from card edges. Text 14px medium, left-center label with small arrow aligned right using internal padding. Solo "Choose Solo", Team "Choose Team", Agency "Choose Agency", each with ↗. Left/right buttons ink teal with white text. Middle button matte coral with dark teal text. No glossy gradients. All buttons perfectly aligned on same baseline.
+
+ENTERPRISE: 20px below cards, a refined 76-88px-high single wide teal strip aligned exactly to grid outer edges, 16px corners. Left "Enterprise" 21px medium, next smaller "40 niches. A wider field of view." at 13px regular. Right "From $3,900 / month" with only numeric amount semibold, then small ivory "Let's talk ↗" button. Restrained thin separator only if it aids grouping. Content comfortably vertically centered. Avoid overstuffing.
+
+Critical invariants: same three photographic objects, same approved brand palette, all price and niche values exactly preserved, same overall page concept. The change is sophistication through type scale, padding, small precise details and restrained sizing. UI labels are crisp and perfectly spelled. No extra feature claims, testimonials, fabricated badges or performance claims. This must look like a professionally finished site ready to build, with tangible but TINY custom assets, readable pricing and superb typographic rhythm.
